@@ -1,0 +1,41 @@
+.section {
+  &__logo {
+    display: inline-block;
+    width: 92px;
+    height: 92px;
+    margin: 0 0 20px 0;
+  }
+
+  &__heading {
+    @include font-style(24px, 28px, $ActiveBlue, 500);
+    margin: 0 0 15px 0;
+  }
+
+  &__text {
+    @include font-style(18px, 26px, $white, 500);
+  }
+}
+
+@media (max-width: 620px) {
+  .section {
+    &__wrapper_mobile {
+      display: flex;
+      align-items: center;
+    }
+
+    &__logo {
+      width: 64px;
+      height: 64px;
+      margin: 0 10px 10px 0;
+      flex-shrink: 0;
+    }
+
+    &__heading {
+      @include font-style(18px, 22px, $ActiveBlue, 500);
+    }
+
+    &__text {
+      @include font-style(15px, 22px, $white, 500);
+    }
+  }
+}

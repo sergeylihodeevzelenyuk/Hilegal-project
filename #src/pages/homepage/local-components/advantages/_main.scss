@@ -1,0 +1,113 @@
+
+.advantages {
+
+  &__container {
+    display: flex;
+    padding: 80px 173px 0 60px;
+    margin: 0 0 80px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 567px;
+    text-align: right;
+    @include font-style(42px, 50px, $TextGrey, 500);
+  }
+
+  &__item {
+    flex-grow: 1;
+    padding: 0 40px 20px 0;
+    border-right: 4px solid $TextGrey;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &:hover, &:first-child {
+      color: $AccentRed;
+      @include GradientTextRed;
+      border-color: $AccentRed;
+    }
+
+    &__pagination-mobile {
+      display: none;
+    }
+  }
+
+  &__descriptions {
+    flex-basis: 640px;
+    padding: 46px 0 40px 38px;
+
+    &_heading-mobile {
+      display: none;
+    }
+
+    h3 {
+      margin: 0 0 20px 0;
+      @include font-style(31px, 38px, $white, 500);
+    }
+
+    p {
+      @include font-style(20px, 30px, $white, 500);
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .advantages {
+    &__list {
+      @include font-style(22px, 26px, $TextGrey, 500);
+    }
+
+    &__descriptions {
+
+      h3 {
+        @include font-style(22px, 26px, $white, 500);
+        margin: 0 0 15px 0;
+      }
+
+      p {
+        @include font-style(16px, 26px, $white, 500);
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 730px) {
+  .advantages {
+
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px 0;
+    }
+
+    &__list_mobile {
+      display: none
+    }
+
+    &__descriptions {
+      flex-basis: unset;
+      padding: 0;
+
+      &_heading-mobile {
+        display: block;
+        @include font-style(14px, 17px, $AccentRed, 600);
+        @include GradientTextRed;
+        text-transform: uppercase;
+        margin: 0 0 10px;
+      }
+    }
+
+    &__pagination-mobile {
+      display: block;
+
+      span {
+        @include PaginationBlueDot;
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+@import "../../assets/scss/reset";
+@import "../common-components/header/main";
+@import "../common-components/services/main";
+@import "../common-components/cases/main";
+@import "../common-components/clients/main";
+@import "../common-components/publications/main";
+@import "../common-components/footer/main";
+@import "local-components/advantages/main";
+@import "local-components/team-card/main";
+
+@import "../../assets/scss/assets";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+.page__wrapper {
+  min-width: 320px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.hallo {
+  &__section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: url("../../assets/img/PatternSplash.png") center/cover no-repeat;
+  }
+
+  &__heading {
+    position: relative;
+    bottom: 450px;
+    max-width: 450px;
+    @include font-style(36px, 45px, $white, 600);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__logo-container {
+    position: relative;
+    top: 175px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 595px;
+    height: 687px;
+    background: url("../../assets/img/SymbolLongleg.png") center /contain no-repeat;
+  }
+
+  &__art-shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: url("../../assets/img/Shade.png") center / cover no-repeat;
+  }
+
+  &__button-scroll-down {
+    width: 42px;
+    height: 42px;
+    position: sticky;
+    bottom: 20px;
+    left: calc(50% - 21px);
+    transition: 0.5s;
+    z-index: 1;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+
+@media (max-width: 414px) {
+  .hallo {
+    &__section {
+      background: url("../../assets/img/Pattern.png") center/cover no-repeat;
+    }
+
+    &__logo-heading_wrapper {
+      padding: 0 20px;
+    }
+
+    &__logo-container {
+      position: relative;
+      top: 100px;
+    }
+
+    &__heading {
+      bottom: 550px;
+    }
+  }
+}
+
+@media (min-height: 901px) and (min-width: 414px) {
+  .hallo__button-scroll-down {
+    display: none;
+  }
+}
+
+@media (min-width: 415px) and (max-width: 1400px) and (max-height: 800px) {
+  .hallo {
+
+    &__logo-container {
+      position: relative;
+      top: 100px;
+    }
+
+    &__heading {
+      bottom: 550px;
+    }
+  }
+}
+
+@media (min-width: 1441px) and (min-height: 901px) {
+  .hallo {
+    &__section {
+      height: 800px;
+    }
+  }
+}
+
+@media (max-width: 1366px) and (min-height: 901px) {
+  .hallo {
+    &__section {
+      height: 800px;
+    }
+  }
+}
+
+.main {
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  position: relative;
+  top: -1px;
+  min-height: 1374px;
+  background: url("../../assets/img/Bg.png") center/cover no-repeat;
+
+  &__art-wrapper {
+    position: relative;
+    bottom: -20px;
+    width: 100%;
+    height: 20px;
+    background-image: url("../../assets/img/Card-shadow.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+@media (max-width: 414px) {
+  .main__art-wrapper {
+    background-image: url("../../assets/img/Card-shadow-mobile.png");
+  }
+}
+

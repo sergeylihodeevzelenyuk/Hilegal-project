@@ -1,0 +1,114 @@
+$black: #000000;
+$white: #ffffff;
+$TextGrey: #B3B3BA;
+$TextBlue: #323264;
+$TextNavy: #46466E;
+
+$SeparatorGrey: #E6E6F0;
+$MainSoft: #686887;
+$AccentRed: #F0145A;
+$ActiveBlue: #24A3FF;
+
+$BgGrey: #F5F5FA;
+$BgBrightGrey: #EDEDF7;
+
+$BgNavyBlue: #1C4280;
+$BgAnthracite: #143646;
+$BgOrange: #F48B30;
+$BgPurple: #9E4DC3;
+$BgDarkGrey: #E2E2E4;
+$BgMagentaRed: #C71C36;
+$BgBlue: #DCF3F9;
+$BgDarkGreyVar: #EAEAEA;
+$BgDarkNavy: #282240;
+$BgDarkBlue: #1D4568;
+
+$main-radius: 8px;
+
+@mixin font-style(
+  $font-size: 16px,
+  $line-height: 18px,
+  $color: $white,
+  $font-weight: 700,
+) {
+  font-family: 'Open Sans', sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: $font-weight;
+}
+
+@mixin GradientTextRed {
+  background: linear-gradient(to right, $AccentRed 0%, #ef8080 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin Path(
+  $color: $ActiveBlue,
+  $opacity: 1,
+  $linkArrow: "../../assets/img/icons/Link-arrow-blue.svg",) {
+  display: inline-block;
+  margin: 0 0 3px 0;
+  @include font-style(14px, 17px, $color, 500);
+  text-transform: uppercase;
+  opacity: $opacity;
+
+  &::after {
+    display: inline-block;
+    content: "";
+    background: url($linkArrow) center 1px / contain no-repeat;
+    width: 12px;
+    height: 12px;
+    opacity: $opacity;
+  }
+}
+
+@mixin border-top-separate {
+  border-top: 4px solid $SeparatorGrey;
+}
+
+@mixin separate-dot($color: $TextGrey,
+$margin-bottom: 2px) {
+  &::before {
+    display: inline-block;
+    content: "";
+    margin: 0 10px $margin-bottom;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: $color;
+  }
+}
+
+@mixin PaginationBlueDot {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 0 7px;
+  background-color: $ActiveBlue;
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+@mixin ArtCards {
+  width: 100%;
+  height: 20px;
+  background-image: url("../../assets/img/Card-shadow.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  &_relative {
+    position: relative;
+    bottom: -20px;
+  }
+
+  @media (max-width: 414px) {
+      background-image: url("../../assets/img/Card-shadow-mobile.png");
+  }
+}

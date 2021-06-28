@@ -1,0 +1,21 @@
+
+.cases-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 20px;
+  background-color: $BgGrey;
+
+  &__text {
+    @include font-style(24px, 28px, $MainSoft, 500);
+    margin: 0 0 20px 0;
+
+    @media (max-width: 1050px) {
+      @include font-style(18px, 21px, $MainSoft, 500);
+    }
+  }
+
+  &__name {
+    @include font-style(18px, 26px, $TextGrey, 400);
+  }
+}

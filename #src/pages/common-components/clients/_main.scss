@@ -1,0 +1,82 @@
+.clients__heading {
+  margin: 0 0 30px;
+  @include font-style(14px, 17px, $TextBlue, 500);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.clients-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 360px;
+  height: 120px;
+  flex-grow: 1;
+  padding: 10px;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .clients-item:nth-child(1) {
+      background-color: $BgNavyBlue;
+    }
+
+    & .clients-item:nth-child(2) {
+      background-color: $BgAnthracite;
+    }
+
+    & .clients-item:nth-child(3) {
+      background-color: $BgOrange;
+    }
+
+    & .clients-item:nth-child(4) {
+      background-color: $BgPurple;
+    }
+
+    & .clients-item:nth-child(5) {
+      background-color: $BgOrange;
+    }
+
+    & .clients-item:nth-child(6) {
+      background-color: $BgDarkGrey;
+    }
+
+    & .clients-item:nth-child(7) {
+      background-color: $BgMagentaRed;
+    }
+
+    & .clients-item:nth-child(8) {
+      background-color: $BgBlue;
+    }
+
+    & .clients-item:nth-child(9) {
+      background-color: $BgDarkGreyVar;
+    }
+
+    & .clients-item:nth-child(10) {
+      background-color: $BgDarkNavy;
+    }
+
+    & .clients-item:nth-child(11) {
+      background-color: $BgDarkBlue;
+    }
+
+    & .clients-item:nth-child(12) {
+      background-color: $black;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 540px) {
+  .clients-item {
+    flex-basis: 160px;
+    height: 90px;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 1080px) {
+  .clients-item {
+    flex-basis: 240px;
+  }
+}

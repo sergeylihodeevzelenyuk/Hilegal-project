@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="alternate" hreflang="ru" href="http://ru.example.com/"/>
+    <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
+    <title>Hlegal. Послуги</title>
+</head>
+<body>
+<div class="page__wrapper">
+    <div class="hallo__section">
+        <div class="header__wrapper">
+            @@include('../common-components/header/header.html', {
+            "path":"'../../assets/img/icons/LogoServices.svg'"
+            })
+        </div>
+        <div class="publication__wrapper">
+            @@include('../common-components/services/local-components/section.html', {
+            "path":"'../../assets/img/icons/Basket.svg'",
+            "heading":'IT та електронна комерція',
+            "text":"Нескінчений потік договорів, податкові питання, трудові відносини, корпоративні папери — юридична робота відволікає вас від ведення бізнесу. Але роботи не так вже й багато, щоб наймати інхауз-юриста.<br><br>До того ж, з часом робота стане однотипною і нецікавою для штатного юриста. А ще ми добре знаємо, як важко в Україні знайти хорошого кандидата з досвідом у сфері інформаційних технологій."
+            })
+        </div>
+        <div class="publication__button-wrapper">
+            @@include('../common-components/button/button.html', {
+            "text":"Безкоштовна консультація"
+            })
+        </div>
+        <div class="publication__details">
+            <h4>Послуги цього напрямку:</h4>
+            <ul>
+                <li><span>супровід інвестиційних проектів з розвитку портової інфраструктури;</span></li>
+                <li><span>паспортизація ГТС, внесення інформації про них в обов'язкові бази даних і реєстри;</span></li>
+                <li><span>оформлення дозвільної документації для будівництва портових терміналів;</span></li>
+                <li><span>оформлення дозвільної та іншої обов'язкової документації, необхідної для здійснення діяльності в порту (дозвіл на викиди, висновок по ОВНС, РТК і ін.);</span></li>
+                <li><span>супровід процедур, пов'язаних з орендою державного майна в порту;</span></li>
+                <li><span>супровід процедур, пов'язаних з підтвердженням статусу портового оператора, морського агента, лінії закордонного плавання;</span></li>
+                <li><span>супровід процедур, пов'язаних з включенням компанії в межі порту;</span></li>
+                <li><span>оскарження дій, пов'язаних з незаконним нав'язуванням послуг в порту компаніями-монополістами.</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="publication__art-wrapper"></div>
+    <div class="cases__wrapper">
+        @@include('../common-components/cases/cases.html')
+    </div>
+    @@include('../common-components/publications/publications.html', {
+    "heading":"Рекомендуємо"
+    })
+    @@include('../common-components/footer/footer.html', {
+    "border-visibility": "border-top-separate"
+    })
+</div>
+</body>
+</html>

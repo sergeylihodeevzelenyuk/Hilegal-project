@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "../../assets/scss/_reset.scss";
+@import "../../assets/scss/_assets";
+@import "../common-components/header/_main.scss";
+@import "../common-components/services/_main.scss";
+@import "../common-components/cases/_main.scss";
+@import "../common-components/publications/_main.scss";
+@import "../common-components/footer/_main.scss";
+
+.page__wrapper {
+  min-width: 320px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.hallo {
+  &__section {
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background: url("../../assets/img/Bg-keyboard-edited.png") center/cover no-repeat;
+  }
+}
+
+.header__wrapper {
+  margin: 0 0 40px;
+}
+
+.publication {
+  &__wrapper {
+    max-width: 60%;
+    text-align: center;
+    margin: 0 auto 40px;
+  }
+
+  &__button-wrapper {
+    width: 250px;
+    margin: 0 auto 80px;
+  }
+
+  &__details {
+    max-width: 76%;
+    margin: 0 auto;
+    padding: 20px 0 100px;
+    @include border-top-separate;
+
+    h4 {
+      @include font-style(24px, 28px, $white, 500);
+      margin: 0 0 20px;
+    }
+
+    ul {
+      column-count: 2;
+      column-gap: 65px;
+      padding: 0 0 0 20px;
+
+      li {
+        @include font-style(18px, 26px, $AccentRed, 400);
+        margin: 0 0 20px;
+
+        span {
+          color: $white
+        }
+      }
+    }
+  }
+  &__art-wrapper {
+    @include ArtCards;
+    margin: 0 0 40px;
+  }
+}
+
+

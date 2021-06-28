@@ -1,0 +1,225 @@
+@import "../../../assets/scss/_assets";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 60px 0 60px;
+
+  &__mobile, &__tablet {
+    display: none;
+  }
+}
+
+.contacts {
+
+  &__block {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 0 12px 0;
+  }
+
+  &__lang {
+    margin: 0 20px 6px 0;
+
+    span {
+      @include font-style(12px, 15px, $white, 700);
+      padding: 5px 6px;
+
+      &:hover, &:first-child {
+        background: $AccentRed;
+        border-radius: $main-radius;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__lang-gray {
+    span {
+      color: $TextGrey;
+      border-radius: $main-radius;
+
+      &:first-child {
+        background: $AccentRed;
+        cursor: pointer;
+      }
+
+      &:hover {
+        background: $BgBrightGrey;
+      }
+    }
+  }
+
+  &__address {
+    @include font-style(16px, 19px, $white, 400);
+  }
+
+  &__address-gray {
+    color: $TextGrey;
+  }
+
+  &__phone {
+    @include font-style(16px, 19px, $white, 700);
+  }
+
+  &__phone-gray {
+    color: $TextGrey;
+  }
+
+  &__facebook {
+    @include separate-dot($white, 7px);
+
+    svg path {
+      &:hover {
+        fill: $AccentRed;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__facebook-gray {
+    @include separate-dot($TextGrey, 7px);
+
+    svg path {
+      fill: $TextGrey;
+
+      &:hover {
+        fill: $ActiveBlue;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: flex-end;
+    @include font-style(18px, 22px, $white, 600);
+
+    a {
+      margin: 0 0 0 15px;
+      transition: 6ms;
+      border-bottom: 3px solid transparent;
+
+      &:hover {
+        border-bottom: 3px solid $white;
+      }
+    }
+  }
+
+  &__nav-gray {
+    color: $ActiveBlue;
+
+    a {
+      &:hover {
+        color: $AccentRed;
+        border-bottom: 3px solid $AccentRed;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 649px) {
+  .header {
+    &__desktop, &__tablet {
+      display: none;
+    }
+
+    &__mobile {
+      display: block;
+      padding: 20px 20px 0;
+
+      &_top-string, &_bottom-string {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &_top-string {
+        margin: 0 0 10px;
+      }
+
+      &_bottom-string {
+        padding: 10px 0;
+      }
+
+      &_logo {
+        height: 31px;
+      }
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  .contacts__phone {
+    @include separate-dot($white);
+  }
+  .contacts__phone-gray {
+    @include separate-dot($TextGrey);
+  }
+}
+
+@media (min-width: 650px) and (max-width: 1009px) {
+  .header {
+    padding: 34px 40px 0;
+
+    &__desktop, &__mobile {
+      display: none;
+    }
+
+    &__nav_small-tablet {
+      display: block;
+    }
+
+    &__nav_big-tablet {
+      display: none;
+    }
+
+    &__tablet {
+      display: block;
+    }
+
+    &__logo-nav_tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 15px 0;
+    }
+
+    .contacts__nav {
+      justify-content: start;
+
+      a {
+        margin: 0 15px 0 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1010px) and (max-width: 1279px) {
+  .header {
+    &__desktop, &__mobile {
+      display: none;
+    }
+
+    &__nav_small-tablet {
+      display: none;
+    }
+
+    &__tablet {
+      display: block;
+    }
+
+    &__logo-nav_tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+
+
+
+

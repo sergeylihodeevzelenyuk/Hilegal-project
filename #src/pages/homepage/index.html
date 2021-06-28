@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="alternate" hreflang="ru" href="http://ru.example.com/"/>
+    <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
+    <title>Hlegal. Юридична контора</title>
+</head>
+<body>
+<div class="page__wrapper">
+    <div class="hallo__section">
+        @@include('../common-components/header/header.html', {
+        "path":"'../../assets/img/icons/Logo-Min.png'"
+        })
+        <div class="hallo__logo-heading_wrapper">
+            <div class="hallo__logo-container">
+            </div>
+            <h1 class="hallo__heading">системний адміністратор правових рішень</h1>
+        </div>
+        <div class="hallo__art-shadow"></div>
+        <div class="hallo__button-scroll-down">
+            <a href="#main">
+                <img src="../../assets/img/icons/Scroll_down.svg" alt="scroll down icon">
+            </a>
+        </div>
+    </div>
+    <div class="main" id="main">
+        @@include('./local-components/advantages/advantages.html')
+        @@include('../common-components/services/services.html')
+        <div class="main__art-wrapper main__art-wrapper_relative"></div>
+    </div>
+    @@include('./local-components/team-card/team-card.html')
+    @@include('../common-components/cases/cases.html')
+    @@include('../common-components/clients/clients.html')
+    @@include('../common-components/publications/publications.html', {
+    "heading":"Нам є що розказати"
+    })
+    @@include('../common-components/footer/footer.html', {
+    "border-visibility": "border-top-separate"
+    })
+</div>
+</body>
+</html>

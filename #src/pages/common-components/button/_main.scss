@@ -1,0 +1,15 @@
+.common__button {
+  width: 100%;
+  padding: 16px 17px 17px;
+  background-color: $ActiveBlue;
+  border: $ActiveBlue;
+  border-radius: 12px;
+  @include font-style(14px, 17px, $white, 500);
+  text-align: center;
+  cursor: pointer;
+  transition: 6ms;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

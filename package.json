@@ -1,0 +1,27 @@
+{
+  "name": "hlegal",
+  "version": "1.0.0",
+  "description": "gulp assembly",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lihodeev",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergeylihodeevzelenyuk/Hilegal-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sergeylihodeevzelenyuk/Hilegal-project/issues"
+  },
+  "homepage": "https://github.com/sergeylihodeevzelenyuk/Hilegal-project#readme"
+}

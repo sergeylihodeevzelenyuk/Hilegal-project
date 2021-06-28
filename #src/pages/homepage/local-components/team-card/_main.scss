@@ -1,0 +1,103 @@
+
+.team-card {
+  padding: 40px 60px 0;
+  margin: 0 0 41px 0;
+  background-color: $white;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    background-color: $BgGrey;
+    border-radius: 12px;
+    margin: 0 0 20px 0;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    width: 413px;
+    height: 500px;
+    background: url("../../assets/img/Team-member.png") center / cover no-repeat;
+  }
+
+  &__description {
+    padding: 40px 40px;
+  }
+
+  &__path {
+    @include Path;
+  }
+
+  &__heading {
+    @include font-style(42px, 50px, $AccentRed, 500);
+    @include GradientTextRed;
+    margin: 0 0 20px 0;
+  }
+
+  &__name {
+    @include font-style(18px, 21px, $TextGrey, 600);
+    margin: 0 0 5px 0;
+  }
+
+  &__position {
+    @include font-style(16px, 22px, $TextGrey, 400);
+  }
+
+  &__pagination {
+    position: relative;
+    width: 90px;
+    left: calc(50%);
+    transform: translateX(-50%);
+
+    span {
+      @include PaginationBlueDot;
+    }
+  }
+}
+
+@media (max-width: 1110px) {
+  .team-card__heading {
+    @include font-style(29px, 37px, $AccentRed, 500);
+  }
+}
+
+@media (max-width: 889px) {
+  .team-card {
+    margin: 0 0 30px 0;
+    padding: 40px 20px 0;
+
+    &__container {
+      margin: 0 0 15px 0;
+    }
+
+    &__heading {
+      margin: 0 0 10px 0;
+    }
+
+    &__img_mobile {
+      display: none;
+    }
+
+    &__description {
+      padding: 20px 20px;
+    }
+
+    &__member {
+      display: flex;
+
+      &::before {
+        display: inline-block;
+        content: "";
+        height: 60px;
+        width: 60px;
+        flex-shrink: 0;
+        margin: 0 10px 0 0;
+        border-radius: 50%;
+        background: url("../../assets/img/Team-member-mobile.png") center / contain no-repeat;
+      }
+    }
+
+    &__name-wrapper_mobile {
+      padding: 5px 0 0;
+    }
+  }
+}

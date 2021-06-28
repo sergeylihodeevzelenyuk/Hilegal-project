@@ -1,0 +1,81 @@
+@import "local-components/article.scss";
+@import "../../common-components/button/_main.scss";
+
+
+.publications {
+  height: 872px;
+  overflow-y: hidden;
+  background-color: $BgGrey;
+  padding: 40px 60px 0;
+
+  &__path {
+    @include Path;
+  }
+
+  &__heading {
+    @include font-style(42px, 50px, $AccentRed, 500);
+    @include GradientTextRed;
+    margin: 0 0 40px 0;
+  }
+
+  &__container {
+    column-count: 3;
+    column-gap: 40px;
+    text-align: center;
+  }
+
+  &__art-shadow {
+    position: sticky;
+    bottom: -1px;
+    height: 200px;
+    width: 100%;
+    background: url("../../assets/img/Shade-white.png") center/cover no-repeat;
+  }
+
+  &__button-wrapper {
+    width: 250px;
+    position: sticky;
+    left: calc(50% - 125px);
+    bottom: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .publications {
+    &__container {
+      column-count: 2;
+      column-gap: 40px;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .publications {
+    height: 921px;
+    padding: 20px 20px 0;
+
+    &__heading {
+      @include font-style(30px, 38px, $AccentRed, 500);
+      margin: 0 0 17px 0;
+    }
+
+    &__container {
+      column-count: 1;
+
+      & :nth-child(4), & :nth-child(5), & :nth-child(6) {
+        display: none;
+      }
+    }
+
+    &__art-shadow_mobile {
+      display: none;
+    }
+
+    &__button-wrapper {
+      position: unset;
+      margin: 20px auto;
+      box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+      border-radius: 12px;
+    }
+  }
+}
