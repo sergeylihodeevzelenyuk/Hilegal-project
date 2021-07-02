@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="alternate" hreflang="ru" href="http://ru.example.com/"/>
+    <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
+    <title>Hlegal. Послуги</title>
+</head>
+<body>
+<div class="page__wrapper">
+    <div class="header__wrapper">
+        @@include('../common-components/header/header.html', {
+        "path":"'../../assets/img/Logo-about-us.svg'",
+        "forWhiteBg":"gray",
+        "about-active":"active"
+        })
+    </div>
+    <main class="main">
+        <div class="team-specs__container">
+            <section class="team-specs">
+                <h4 class="team-specs__heading">Перевертаємо уявлення про юридичні послуги.</h4>
+                <p class="team-specs__text">Консолідуючи багаторічний досвід і практику, юристи компанії супроводжують
+                    складні проекти і досягають прийняття ряду важливих для галузі рішень. Багато з них формують
+                    практику застосування морського права в Україні.</p>
+                <p class="team-specs__text">Prolegals – надійний бізнес-партнер, що підтверджується стабільним
+                    співробітництвом з міжнародними юридичними фірмами, довірою великих українських і міжнародних
+                    компаній, визнанням професійних рейтингів.</p>
+            </section>
+            <div class="team-specs__details">
+                <ul class="team-specs__details-list">
+                    <li>
+                        <img src="../../assets/img/icons/team-icon-1.png" alt="іконка 10 рокік досвіду">
+                        <span>років релевантного досвіду</span>
+                    </li>
+                    <li>
+                        <img src="../../assets/img/icons/team-icon-2.png" alt="іконка 10 рокік досвіду">
+                        <span>активних клієнтів, які довіряють нам свої доручення щомісячно</span>
+                    </li>
+                    <li>
+                        <img src="../../assets/img/icons/team-icon-2.png" alt="іконка 10 рокік досвіду">
+                        <span>годин роботи «pro bono» щорічно</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main__img-wrapper">
+            <img class="main__img main__img_desktop" src="../../assets/img/Photo-team-main.png" alt="командне фото">
+            <img class="main__img main__img_mobile" src="../../assets/img/Photo-team-main-mobile.png"
+                 alt="командне фото">
+        </div>
+        <div class="team-quality__container">
+            <div class="team-quality__text">
+                <p>Історично незмінна юридична професія почала переформатовуватись в останні роки. Клієнти це
+                    відчувають, але юридичні фірми все ще опираються еволюції. Клієнти потребують зручності, простоти,
+                    прозорої оплати. Google, IBM WatsОn, Symantec Clearwell доводять, що технологічна революція в
+                    юридичних послугах розпочалася і стала неминучою.</p>
+                <p>Якість — це те, про що ми піклуємося найбільше.</p>
+                <p>Все просто. Якщо ви не задоволені нашою роботою, ми повернемо гроші. Ми довіряємо нашим клієнтам. І
+                    ми хочемо, щоб клієнти нам теж довіряли.</p>
+            </div>
+            <h4 class="team-quality__heading">Якість — це те, про що ми піклуємося найбільше.</h4>
+        </div>
+        <div class="awards">
+            <h5 class="awards__heading">Досягнення</h5>
+            <div class="awards__slider">
+                <div class="awards__slider-item">
+                    <img src="../../assets/img/icons/Awards-img-1.png" alt="досягнення">
+                </div>
+                <div class="awards__slider-item">
+                    <img src="../../assets/img/icons/Awards-img-2.png" alt="досягнення">
+                </div>
+                <div class="awards__slider-item awards__slider-item_desktop">
+                    <img src="../../assets/img/icons/Awards-img-3.png" alt="досягнення">
+                </div>
+                <div class="awards__slider-item awards__slider-item_desktop">
+                    <img src="../../assets/img/icons/Awards-img-4.png" alt="досягнення">
+                </div>
+            </div>
+            <div class="awards__pagination">
+                <span class="awards__pagination-item"></span>
+                <span class="awards__pagination-item"></span>
+                <span class="awards__pagination-item"></span>
+                <span class="awards__pagination-item awards__pagination-item_mobile"></span>
+                <span class="awards__pagination-item awards__pagination-item_mobile"></span>
+                <span class="awards__pagination-item awards__pagination-item_mobile"></span>
+            </div>
+        </div>
+    </main>
+    @@include('../common-components/footer/footer.html', {
+    "border-visibility": "border-top-separate"
+    })
+</div>
+</body>
+</html>

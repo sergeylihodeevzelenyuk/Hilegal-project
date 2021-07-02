@@ -13,10 +13,11 @@
     <div class="hallo__section">
         <div class="header__wrapper">
             @@include('../common-components/header/header.html', {
-            "path":"'../../assets/img/icons/LogoServices.svg'"
+            "path":"'../../assets/img/icons/LogoServices.svg'",
+            "services-active":"active"
             })
         </div>
-        @@include('../common-components/services/services.html', {
+        @@include('../common-components/services/services-comp.html', {
         "visibility":"hidden"
         })
         <div class="hallo__art-wrapper hallo__art-wrapper_relative"></div>

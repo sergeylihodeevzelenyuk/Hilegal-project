@@ -1,0 +1,34 @@
+<form class="feedback" method="post">
+    <h3 class="feedback__heading">Ми хотіли б Вам допомогти</h3>
+    <div class="feedback__input-wrapper">
+        @@include('./local-component/input.html',
+        {
+        "nameOfTag":"input",
+        "placeholder":"Iм’я",
+        "name":"name"
+        })
+    </div>
+    <textarea class="feedback__message" placeholder="Повідомлення" name="message"></textarea>
+    <p class="feedback__request">Як вам відповісти?</p>
+    <div class="feedback__input-wrapper">
+        @@include('./local-component/input.html', {
+        "nameOfTag":"input",
+        "placeholder":"Номер телефона",
+        "name":"phone"
+        })
+    </div>
+    <div class="feedback__input-wrapper">
+        @@include('./local-component/input.html', {
+        "nameOfTag":"input",
+        "placeholder":"Чи email",
+        "name":"email"
+        })
+    </div>
+    <div class="feedback__button-wrapper">
+        @@include('../button/button.html', {
+        "nameOfTag":"input",
+        "type":"submit",
+        "text":"Надіслати запит"
+        })
+    </div>
+</form>

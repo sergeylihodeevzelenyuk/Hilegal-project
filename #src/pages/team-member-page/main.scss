@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "../../assets/scss/_reset.scss";
+@import "../../assets/scss/_assets";
+@import "../common-components/header/_main.scss";
+@import "../common-components/footer/_main.scss";
+
+.page__wrapper {
+  min-width: 320px;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: $white;
+}
+
+.header__wrapper {
+  margin: 0 0 80px;
+}
+
+.team-member {
+  width: 76%;
+  margin: 0 auto 80px;
+  display: flex;
+
+  &__img {
+    margin: 0 40px 0 0;
+    flex-shrink: 0;
+
+    img {
+      border-radius: 12px;
+    }
+  }
+
+  &__name {
+    @include font-style(39px, 50px, $AccentRed, 600);
+    @include GradientTextRed;
+    margin: 0 0 10px;
+  }
+
+  &__position {
+    margin: 0 0 20px;
+  }
+
+  &__position-item {
+    @include font-style(16px, 22px, $TextGrey, 600);
+  }
+
+  &__mail span, &__linkdin span {
+    @include font-style(16px, 19px, $ActiveBlue, 600);
+  }
+
+  &__about {
+    @include border-top-separate;
+    padding: 40px 0 0;
+
+    h5 {
+      @include font-style(14px, 17px, $TextBlue, 700);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0 0 10px;
+    }
+
+    p {
+      @include font-style(17px, 26px, $black, 500);
+    }
+
+    p:not(p:last-child) {
+      margin: 0 0 40px;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .main {
+    min-height: calc(100vh - 333px);
+  }
+}
+
+@media (min-height: 1000px) and (max-width: 1100px) {
+  .main {
+    min-height: calc(100vh - 371px);
+  }
+}
+
+@media (max-width: 1279px) {
+
+  .team-member {
+    width: 100%;
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 1070px) {
+  .team-member__mail span, .team-member__linkdin span {
+    @include separate-dot;
+  }
+}
+
+@media (max-width: 1070px) {
+
+  .team-member {
+
+    &__name {
+      @include font-style(32px, 37px, $AccentRed, 600);
+    }
+
+    &__position {
+      flex-direction: column;
+      display: flex;
+    }
+
+    &__position-item, &__mail {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 1009px) {
+
+  .header__wrapper {
+    margin: 0 0 20px;
+  }
+
+  .team-member {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 40px;
+    margin-bottom: 40px;
+
+    &__img {
+      margin: 0 0 20px 0;
+    }
+
+    &__about {
+      padding: 20px 0 0;
+
+      p:not(p:last-child) {
+        margin: 0 0 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 649px) {
+
+  .team-member {
+    padding: 0 20px;
+  }
+}
+
+

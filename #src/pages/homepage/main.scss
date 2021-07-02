@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 @import "../../assets/scss/reset";
+@import "../../assets/scss/assets";
 @import "../common-components/header/main";
 @import "../common-components/services/main";
 @import "../common-components/cases/main";
@@ -8,8 +10,6 @@
 @import "local-components/advantages/main";
 @import "local-components/team-card/main";
 
-@import "../../assets/scss/assets";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 .page__wrapper {
   min-width: 320px;
@@ -148,6 +148,18 @@
 @media (max-width: 414px) {
   .main__art-wrapper {
     background-image: url("../../assets/img/Card-shadow-mobile.png");
+  }
+}
+
+@media (max-width: 350px) {
+  .hallo {
+    &__logo-container {
+      top: 30px;
+    }
+
+    &__heading {
+      bottom: 605px;
+    }
   }
 }
 

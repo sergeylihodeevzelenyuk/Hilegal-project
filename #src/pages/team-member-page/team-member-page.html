@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="alternate" hreflang="ru" href="http://ru.example.com/"/>
+    <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
+    <title>Hlegal. Команда</title>
+</head>
+<body>
+<div class="page__wrapper">
+    <div class="header__wrapper">
+        @@include('../common-components/header/header.html', {
+        "path":"'../../assets/img/icons/Logo-team.png'",
+        "forWhiteBg":"gray",
+        "team-active":"active"
+        })
+    </div>
+    <main class="main">
+        <div class="team-member">
+            <div class="team-member__img">
+                <img src="../../assets/img/Team-member.png" alt="фото члену команди">
+            </div>
+            <div class="team-member__description">
+                <h3 class="team-member__name">Олександр Кац</h3>
+                <div class="team-member__position">
+                    <span class="team-member__position-item">Керуючий партнер</span>
+                    <a class="team-member__mail" href="#"><span>kac@hlegals.net</span></a>
+                    <a class="team-member__linkdin" href="#"><span>Профіль в LinkedIn</span></a>
+                </div>
+                <div class="team-member__about">
+                    <p>Олександр очолює практику міжнародної торгівлі та шиппінгу. Він спеціалізується на вирішенні
+                        спорів, пов'язаних з купівлею-продажем сировинних товарів і перевезенням товарів морем.</p>
+                    <p>Десис представляє інтереси судновласників, експедиторів, вантажовласників, морських агентів,
+                        контейнерних ліній, а також міжнародних банків і клубів P & I.</p>
+                    <h5>Освіта</h5>
+                    <p>Національний університет «Одеська юридична академія», магістр права.</p>
+                    <h5>Досвід роботи</h5>
+                    <p>До його професійного досвіду відноситься врегулювання суперечок за англійським правом і
+                        представництво інтересів в іноземних комерційних арбітражах, таких як GAFTA, FOSFA та LMAA.
+                        Данило також представляє інтереси клієнтів у державних судах України по аналогічним спорах, а
+                        також в МКАС і МАК при ТПП України</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include('../common-components/footer/footer.html', {
+    "border-radius-visibility": "border-radius"
+    })
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "../../assets/scss/_reset.scss";
+@import "../../assets/scss/_assets";
+@import "../common-components/header/_main.scss";
+@import "../common-components/footer/_main.scss";
+@import "./local-components/team-card.scss";
+
+
+.page__wrapper {
+  min-width: 320px;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: $white;
+}
+
+.header__wrapper {
+  margin: 0 0 80px;
+}
+
+.main {
+
+  &__heading {
+    width: 60%;
+    @include font-style(39px, 50px, $AccentRed, 600);
+    @include GradientTextRed;
+    margin: 0 auto 80px;
+  }
+}
+
+.team-cards__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin: 0 0 20px;
+}
+
+@media (min-width: 1600px) {
+  .main {
+    min-height: calc(100vh - 333px);
+  }
+}
+
+@media (min-height: 1000px) and (max-width: 1100px) {
+  .main {
+    min-height: calc(100vh - 311px);
+  }
+}
+
+@media (max-width: 1025px) {
+  .header__wrapper {
+    margin: 0 0 20px;
+  }
+
+  .main {
+    &__heading {
+      width: unset;
+      @include font-style(30px, 38px, $AccentRed, 600);
+      padding: 0 20px 0;
+      margin: 0 0 20px;
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .main__heading {
+    padding: 0 40px 0;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1025px) {
+  .main__heading {
+    padding: 0 60px 0;
+  }
+}
+
+@media (max-width: 415px) {
+
+  .team-cards__wrapper {
+    padding: 0;
+    margin: 0 0 20px;
+  }
+}
+
+  @media (max-width: 375px) {
+    .main {
+      &__heading {
+        font-size: 22px;
+      }
+    }
+  }

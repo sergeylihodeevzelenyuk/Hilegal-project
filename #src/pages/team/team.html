@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="alternate" hreflang="ru" href="http://ru.example.com/"/>
+    <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
+    <title>Hlegal. Команда</title>
+</head>
+<body>
+<div class="page__wrapper">
+    <div class="header__wrapper">
+        @@include('../common-components/header/header.html', {
+        "path":"'../../assets/img/icons/Logo-team.png'",
+        "forWhiteBg":"gray",
+        "team-active":"active"
+        })
+    </div>
+    <main class="main">
+        <h2 class="main__heading">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу,
+            навіть у ситуаціях, коли більшість безсилі.</h2>
+        <div class="team-cards__wrapper">
+            @@include('./local-components/team-card.html',{
+            "path":"'../../assets/img/Team-member.png'",
+            "name":"Олександр Олександровський",
+            "position":"Керуючий партнер"
+            })
+            @@include('./local-components/team-card.html',{
+            "path":"'../../assets/img/Team-member-1.png'",
+            "name":"Оксана Кобзар",
+            "position":"Equity partner, Attorney-at-law"
+            })
+            @@include('./local-components/team-card.html',{
+            "path":"'../../assets/img/Team-member-2.png'",
+            "name":"Владислав Мельник",
+            "position":"Associate"
+            })
+            @@include('./local-components/team-card.html',{
+            "path":"'../../assets/img/Team-member-3.png'",
+            "name":"Владислав Мельник",
+            "position":"Associate"
+            })
+            @@include('./local-components/team-card.html',{
+            "path":"'../../assets/img/Team-member-4.png'",
+            "name":"Оксана Кобзар",
+            "position":"Equity partner, Attorney-at-law"
+            })
+            @@include('./local-components/team-card.html',{
+            "path":"'../../assets/img/Team-member-5.png'",
+            "name":"Юлія Гудименко",
+            "position":"Associate, Attorney-at-law"
+            })
+        </div>
+    </main>
+    @@include('../common-components/footer/footer.html', {
+    "border-radius-visibility": "border-radius"
+    })
+</div>
+</body>
+</html>

@@ -8,7 +8,7 @@ let path = {
         img: project_folder + "/assets/",
     },
     src: {
-        html: [source_folder + "/pages/**/*.html", "!" + source_folder + "/pages/_*.html"],
+        html: [source_folder + "/pages/**/{about-us,index,services,service-page,team,team-member-page,contact}.html"],
         css: source_folder + "/pages/**/main.scss",
         img: source_folder + "/assets/**/*.{jpg,jpeg,png,svg}",
     },
@@ -29,11 +29,10 @@ let { src, dest } = require('gulp'),
     imagemin = require('gulp-imagemin');
 
 
-
 function browserSync(params) {
     browsersync.init({
         server: {
-            baseDir: "./" + project_folder + "/"
+            baseDir: "./" + project_folder + "/pages/homepage/"
         },
         port: 3000,
         notify: false
@@ -85,7 +84,7 @@ function claen(params) {
 }
 
 let build = gulp.series(claen, gulp.parallel(css, html, images));
-let watch=gulp.parallel(build, watchFiles, browserSync);
+let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.images = images;
 exports.css = css;

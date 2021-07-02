@@ -68,6 +68,10 @@ $main-radius: 8px;
   border-top: 4px solid $SeparatorGrey;
 }
 
+@mixin border-left-separate {
+  border-left: 4px solid $SeparatorGrey;
+}
+
 @mixin separate-dot($color: $TextGrey,
 $margin-bottom: 2px) {
   &::before {

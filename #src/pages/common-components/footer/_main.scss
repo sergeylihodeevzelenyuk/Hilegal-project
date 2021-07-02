@@ -2,6 +2,10 @@
   background-color: $BgGrey;
   padding: 0 60px 33px;
 
+  &_border-radius {
+    border-radius: 12px 12px 0 0;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;

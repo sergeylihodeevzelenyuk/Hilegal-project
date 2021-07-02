@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "../../assets/scss/_reset.scss";
+@import "../../assets/scss/_assets";
+@import "../common-components/header/_main.scss";
+@import "../common-components/footer/_main.scss";
+@import "../common-components/feedback-form/_feedback-form.scss";
+
+
+.page__wrapper {
+  min-width: 320px;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: $white;
+}
+
+.header__wrapper {
+  margin: 0 0 80px;
+}
+
+.contact {
+
+  &__container {
+    width: 76%;
+    display: flex;
+    margin: 0 auto 73px;
+  }
+
+  &__info {
+    width: 414px;
+    margin: 0 150px 0 0;
+  }
+
+  &__form {
+    width: 530px;
+  }
+
+  &__address, &__phone {
+    @include font-style(21px, 30px, $TextBlue, 500);
+    font-style: normal;
+    margin: 0 0 20px;
+  }
+
+  &__phone {
+    padding: 20px 0 0;
+  }
+
+  &__mail {
+    @include font-style(21px, 30px, $ActiveBlue, 500);
+    margin: 0 0 20px;
+  }
+
+  &__phone, &__social {
+    @include border-top-separate;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    padding: 20px 0 0;
+    @include font-style(12px, 16px, $ActiveBlue, 600);
+
+    p {
+      padding: 2px 0 0;
+    }
+
+    svg {
+      margin: 0 10px 0 1px;
+    }
+  }
+
+  &__map-wrapper {
+    position: relative;
+    top: 7px;
+  }
+}

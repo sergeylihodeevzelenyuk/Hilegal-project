@@ -66,6 +66,8 @@ button,
 textarea,
 select {
   font: inherit;
+  width: unset;
+  height: unset;
 }
 
 .header {
@@ -186,6 +188,10 @@ select {
   font-weight: 600;
 }
 
+.contacts__nav .nav__active {
+  border-bottom: 3px solid #ffffff;
+}
+
 .contacts__nav a {
   margin: 0 0 0 15px;
   transition: 6ms;
@@ -200,7 +206,16 @@ select {
   color: #24A3FF;
 }
 
+.contacts__nav-gray .nav__active {
+  color: #F0145A;
+  border-bottom: 3px solid #F0145A;
+}
+
 .contacts__nav-gray a:hover {
+  border-bottom: 3px solid #F0145A;
+}
+
+.contacts__nav-gray a:active {
   color: #F0145A;
   border-bottom: 3px solid #F0145A;
 }
@@ -217,6 +232,9 @@ select {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .header__mobile_burger-menu-gray path {
+    stroke: #323264;
   }
   .header__mobile_top-string {
     margin: 0 0 10px;
@@ -311,6 +329,17 @@ select {
   color: #24A3FF;
   font-weight: 500;
   margin: 0 0 15px 0;
+}
+
+.section__heading_red {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 42px;
+  line-height: 50px;
+  color: #F0145A;
+  font-weight: 700;
+  background: linear-gradient(to right, #F0145A 0%, #ef8080 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .section__text {
@@ -694,6 +723,10 @@ select {
 .footer {
   background-color: #F5F5FA;
   padding: 0 60px 33px;
+}
+
+.footer_border-radius {
+  border-radius: 12px 12px 0 0;
 }
 
 .footer__container {

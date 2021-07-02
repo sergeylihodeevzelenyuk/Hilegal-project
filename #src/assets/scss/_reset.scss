@@ -45,6 +45,7 @@ a {
     text-decoration:none;
 }
 
+
 a:-webkit-any-link {
     color: inherit;
     cursor: pointer;
@@ -66,4 +67,6 @@ button,
 textarea,
 select {
     font: inherit;
+    width: unset;
+    height: unset;
 }

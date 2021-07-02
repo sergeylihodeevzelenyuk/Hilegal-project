@@ -96,6 +96,10 @@
     justify-content: flex-end;
     @include font-style(18px, 22px, $white, 600);
 
+    .nav__active {
+      border-bottom: 3px solid $white;
+    }
+
     a {
       margin: 0 0 0 15px;
       transition: 6ms;
@@ -110,8 +114,19 @@
   &__nav-gray {
     color: $ActiveBlue;
 
+    .nav__active {
+      color: $AccentRed;
+      border-bottom: 3px solid $AccentRed;
+    }
+
     a {
       &:hover {
+        border-bottom: 3px solid $AccentRed;
+      }
+    }
+
+    a {
+      &:active {
         color: $AccentRed;
         border-bottom: 3px solid $AccentRed;
       }
@@ -136,6 +151,12 @@
         align-items: center;
       }
 
+      &_burger-menu-gray {
+        path {
+          stroke: $TextBlue;
+        }
+      }
+
       &_top-string {
         margin: 0 0 10px;
       }
@@ -158,6 +179,7 @@
   .contacts__phone-gray {
     @include separate-dot($TextGrey);
   }
+
 }
 
 @media (min-width: 650px) and (max-width: 1009px) {

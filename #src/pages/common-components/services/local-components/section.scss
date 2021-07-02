@@ -11,6 +11,11 @@
     margin: 0 0 15px 0;
   }
 
+  &__heading_red {
+    @include font-style(42px, 50px, $AccentRed, 700);
+    @include GradientTextRed;
+  }
+
   &__text {
     @include font-style(18px, 26px, $white, 500);
   }
