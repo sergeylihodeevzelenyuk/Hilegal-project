@@ -1,4 +1,4 @@
-let project_folder = "dist";
+let project_folder = "./";
 let source_folder = "#src";
 
 let path = {
@@ -32,7 +32,7 @@ let { src, dest } = require('gulp'),
 function browserSync(params) {
     browsersync.init({
         server: {
-            baseDir: "./" + project_folder + "/pages/homepage/"
+            baseDir: "./"
         },
         port: 3000,
         notify: false
