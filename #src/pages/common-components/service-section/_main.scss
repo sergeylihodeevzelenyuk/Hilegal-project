@@ -21,11 +21,17 @@
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 649px) {
   .section {
     &__wrapper_mobile {
       display: flex;
       align-items: center;
+
+      &-big {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     &__logo {
@@ -33,6 +39,11 @@
       height: 64px;
       margin: 0 10px 10px 0;
       flex-shrink: 0;
+
+      &_big {
+        width: 92px;
+        height: 92px;
+      }
     }
 
     &__heading {

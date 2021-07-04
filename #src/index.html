@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link type="image/x-icon" rel="shortcut icon" href="assets/img/icons/favicon.png">
+    <link rel="stylesheet" type="text/css" href="./assets/main.css">
     <link rel="alternate" hreflang="ru" href="http://ru.example.com/"/>
     <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
     <title>Hlegal. Юридична контора</title>
@@ -11,8 +12,10 @@
 <body>
 <div class="page__wrapper">
     <div class="hallo__section">
-        @@include('../common-components/header/header.html', {
-        "path":"'../../assets/img/icons/Logo-Min.png'"
+        @@include('./pages/common-components/header/header.html', {
+        "path":"'./assets/img/icons/Logo-Min.png'",
+        "logoPrefix":".",
+        "menuPrefix":"./pages"
         })
         <div class="hallo__logo-heading_wrapper">
             <div class="hallo__logo-container">
@@ -22,22 +25,28 @@
         <div class="hallo__art-shadow"></div>
         <div class="hallo__button-scroll-down">
             <a href="#main">
-                <img src="../../assets/img/icons/Scroll_down.svg" alt="scroll down icon">
+                <img src="assets/img/icons/Scroll_down.svg" alt="scroll down icon">
             </a>
         </div>
     </div>
     <div class="main" id="main">
-        @@include('./local-components/advantages/advantages.html')
-        @@include('../common-components/services/services-comp.html')
+        @@include('./pages/homepage/local-components/advantages/advantages.html')
+        @@include('./pages/common-components/services/services-comp.html',{
+        "prefix":"."})
         <div class="main__art-wrapper main__art-wrapper_relative"></div>
     </div>
-    @@include('./local-components/team-card/team-card.html')
-    @@include('../common-components/cases/cases.html')
-    @@include('../common-components/clients/clients.html')
-    @@include('../common-components/publications/publications.html', {
+    @@include('./pages/homepage/local-components/team-card/team-card.html')
+    @@include('./pages/common-components/cases/cases.html')
+    @@include('./pages/common-components/clients/clients.html', {
+    "prefix":"."
+    })
+    @@include('./pages/common-components/publications-comp/publications-comp.html', {
+    "page":"homepage",
+    "prefix":".",
     "heading":"Нам є що розказати"
     })
-    @@include('../common-components/footer/footer.html', {
+    @@include('./pages/common-components/footer/footer.html', {
+    "prefix":"./pages",
     "border-visibility": "border-top-separate"
     })
 </div>

@@ -10,6 +10,10 @@
   &__mobile, &__tablet {
     display: none;
   }
+
+  &__href-homepage {
+    cursor: pointer;
+  }
 }
 
 .contacts {

@@ -30,8 +30,13 @@
       @media (min-width: 541px) {
         @include separate-dot;
       }
-      @include font-style(12px, 14px, $ActiveBlue, 600);
+      @include font-style(12px, 14px, $ActiveBlue, 700);
       text-transform: uppercase;
+      letter-spacing: 1px;
+
+      &:hover {
+        color: $AccentRed;
+      }
     }
   }
 
@@ -42,7 +47,7 @@
     & a {
       svg path {
         &:hover {
-          fill: $TextGrey;
+          fill: $AccentRed;
         }
       }
     }
@@ -53,6 +58,10 @@
         @include separate-dot;
       }
       padding: 0 0 7px;
+
+      &:hover {
+        color: $AccentRed;
+      }
     }
 
     & p {

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="image/x-icon" rel="shortcut icon" href="../../assets/img/icons/favicon.png">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="alternate" hreflang="ru" href="http://ru.example.com/"/>
+    <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
+    <title>Hlegal. Публікації</title>
+</head>
+<body>
+<div class="page__wrapper">
+    <div class="header__wrapper">
+        @@include('../common-components/header/header.html', {
+        "path":"'../../assets/img/icons/Logo-publications.png'",
+        "logoPrefix":"../..",
+        "menuPrefix":"..",
+        "forWhiteBg":"gray",
+        "publication-active":"active"
+        })
+    </div>
+    <main class="main">
+        <div class="publication">
+            <div class="article__wrapper">
+                @@include('../common-components/article/article.html', {
+                "visibility":"",
+                "path":"'../../assets/img/publication-main-img.png'",
+                "size":"big",
+                "heading":"Штраф для «Корпорації добра»: що буде з Google та іншими за порушення GDPR",
+                "date":"29 вересня",
+                "text":"21 січня Національна комісія із захисту даних Франції (СNIL) повідомила на своєму сайті, що наклала штраф на Google за порушення Загального регламенту ЄС про захист даних (GDPR). Півроку знадобилося країнам ЄС для того, аби зробити якісний левел-ап у розмірах штрафів за недотримання даного нормативу. До цього штрафували в основному на 20 000–30 000 євро, а найбільший штраф склав 400 000 євро і стосувався госпіталю в Португалії. Але цей прецедент цікавий не стільки сумою штрафу, скільки жорсткістю підходів регулятора. Чому саме, спеціально для Mind пояснює акціонерний партнер Axon Partners Денис Береговий.<br><br>За що? Групові скарги на Google прилетіли до СNIL в той самий день, коли GDPR набрав чинності. Скаржники повідомляли про обробку Google персональних даних користувачів без належних підстав, зокрема, з метою створення персоналізованих рекламних пропозицій."
+                })
+            </div>
+            <h2 class="publication__heading">До уваги українських силовиків: перевірка проводилася онлайн, без обшуків,
+                без вилучення серверів чи іншого видимого для бізнесу втручання. І так можна було.</h2>
+            <div class="publication__main-content">
+                <h4 class="publication__sub-heading">За результатами перевірок СNIL виявили порушення двох вимог GDPR:</h4>
+                <ol>
+                    <li><span>Прозорість та поінформованість користувачів про обробку персональних даних.</span></li>
+                    <li><span>Відсутність належної згоди користувачів для обробки персональних даних з метою персоналізації реклами.</span></li>
+                </ol>
+                <p class="publication__text">У випадку з персоналізацією реклами Google був впевнений, що отримав згоду
+                    користувачів, бо, по-перше, при створенні Google-aкаунтів користувач погоджується з Політикою
+                    конфіденційності, а по-друге, Google має розділ «Ads personalization», де можна вимкнути цю
+                    функцію.</p>
+                <img class="publication__img" src="../../assets/img/publication-img-in-text.png" alt="фото персоналізації реклами">
+                <h6 class="publication__img-caption">Так виглядає вікно налаштувань персоналізації реклами в Google-акаунті</h6>
+                <p class="publication__text">Втім, CNIL так не вважає, оскільки інформація про персоналізацію реклами
+                    недостатньо чітко доноситься користувачам. Як приклад, Комісія стверджує, що відповідне вікно
+                    «Персоналізації» не містить інформації про всю множину Google-сервісів, які здійснюють збір і
+                    обробку персональних даних з цією метою (YouТube, Google search, Play Store, Google pictures, Gmail
+                    і т. д.), а отже, користувач не може усвідомити, в яких обсягах дані використовуються і як саме вони
+                    можуть комбінуватися.</p>
+                <h4 class="publication__sub-heading">Отже, пройдемося по тексту рішення СNIL</h4>
+                <p class="publication__text">Чому Франція, а не Ірландія. Google працює в Європі через юридичну особу в
+                    Ірландії. Але справу порушив не ірландський, а французький регулятор. Відбулося це от чому.</p>
+                <p class="publication__text">Якщо рішення щодо обробки даних ухвалюються будь-де за межами ЄС, то діє
+                    one stop mechanism – куди скарга надійшла, той орган її і розглядає. Оскільки центр прийняття рішень
+                    про обробку даних Google знаходиться в США, а скарга вперше надійшла у Франції – то CNIL її і
+                    розглядав.</p>
+                <div class="publication__social">
+                    <span><img src="../../assets/img/icons/share/fb.png" alt="іконка"></span><span><img
+                        src="../../assets/img/icons/share/tlg-share.png" alt="іконка"></span><span><img
+                        src="../../assets/img/icons/share/in-share.png" alt="іконка"></span>
+                </div>
+            </div>
+        </div>
+        @@include('../common-components/publications-comp/publications-comp.html', {
+        "prefix":"../..",
+        "heading":"Рекомендуємо",
+        "status":"active"
+        })
+    </main>
+    @@include('../common-components/footer/footer.html', {
+    "prefix":"..",
+    "border-visibility": "border-top-separate"
+    })
+</div>
+</body>
+</html>

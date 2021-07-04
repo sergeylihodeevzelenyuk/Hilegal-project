@@ -81,6 +81,10 @@ select {
   display: none;
 }
 
+.header__href-homepage {
+  cursor: pointer;
+}
+
 .contacts__block {
   display: flex;
   justify-content: flex-end;
@@ -354,8 +358,9 @@ select {
   font-size: 12px;
   line-height: 14px;
   color: #24A3FF;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 @media (min-width: 541px) {
@@ -370,13 +375,17 @@ select {
   }
 }
 
+.footer__contacts-address a:hover {
+  color: #F0145A;
+}
+
 .footer__contacts-phone {
   display: flex;
   align-items: center;
 }
 
 .footer__contacts-phone a svg path:hover {
-  fill: #B3B3BA;
+  fill: #F0145A;
 }
 
 .footer__contacts-phone span {
@@ -398,6 +407,10 @@ select {
     border-radius: 50%;
     background-color: #B3B3BA;
   }
+}
+
+.footer__contacts-phone span:hover {
+  color: #F0145A;
 }
 
 .footer__contacts-phone p {

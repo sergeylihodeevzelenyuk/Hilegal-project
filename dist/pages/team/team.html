@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="image/x-icon" rel="shortcut icon" href="../../assets/img/icons/favicon.png">
     <link rel="stylesheet" type="text/css" href="./main.css">
     <link rel="alternate" hreflang="ru" href="http://ru.example.com/"/>
     <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
@@ -12,7 +13,9 @@
 <div class="page__wrapper">
     <div class="header__wrapper">
         <div class="header header__desktop">
-    <img class="header__logo" src='../../assets/img/icons/Logo-team.png' alt="logo">
+    <a class="header__href-homepage" href="../../index.html" title="На головну сторiнку">
+        <img class="header__logo" src='../../assets/img/icons/Logo-team.png' alt="logo">
+    </a>
     <div class="header__contacts contacts">
         <div class="contacts__block">
             <div class="contacts__lang contacts__lang-gray">
@@ -22,14 +25,14 @@
             </div>
             <p class="contacts__address contacts__address-gray">Одеса, Адміральський пр., 3</p>
             <p class="contacts__phone contacts__phone-gray">+38 (050) 390 15 91</p>
-            <a class="contacts__facebook contacts__facebook-gray href="#">
+            <a class="contacts__facebook contacts__facebook-gray" href="#">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
+                    <g clip-path="url(#clip1)">
                         <path d="M24 12.0733C24 5.40541 18.6274 0 12 0C5.37258 0 0 5.40541 0 12.0733C0 18.0995 4.38823 23.0943 10.125 24V15.5633H7.07813V12.0733H10.125V9.41343C10.125 6.38755 11.9165 4.71615 14.6576 4.71615C15.9705 4.71615 17.3438 4.95195 17.3438 4.95195V7.92313H15.8306C14.3399 7.92313 13.875 8.85379 13.875 9.80857V12.0733H17.2031L16.6711 15.5633H13.875V24C19.6118 23.0943 24 18.0995 24 12.0733Z"
                               fill="white"/>
                     </g>
                     <defs>
-                        <clipPath id="clip0">
+                        <clipPath id="clip1">
                             <rect width="24" height="24" fill="white"/>
                         </clipPath>
                     </defs>
@@ -37,11 +40,11 @@
             </a>
         </div>
         <nav class="contacts__nav contacts__nav-gray">
-            <a class="nav__@@about-active" href="#">о нас</a>
-            <a class="nav__@@services-active" href="#">послуги</a>
-            <a class="nav__active" href="#">команда</a>
-            <a class="nav__@@publication-active" href="#">публікації</a>
-            <a class="nav__@@contact-active" href="#">контакти</a>
+            <a class="nav__@@about-active" href="../about-us/about-us.html">о нас</a>
+            <a class="nav__@@services-active" href="../services/services.html">послуги</a>
+            <a class="nav__active" href="../team/team.html">команда</a>
+            <a class="nav__@@publication-active" href="../publications/publications.html">публікації</a>
+            <a class="nav__@@contact-active" href="../contact/contact.html">контакти</a>
         </nav>
     </div>
 </div>
@@ -57,12 +60,12 @@
             <p class="contacts__phone contacts__phone-gray">+38 (050) 390 15 91</p>
             <a class="contacts__facebook contacts__facebook-gray" href="#">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
+                    <g clip-path="url(#clip2)">
                         <path d="M24 12.0733C24 5.40541 18.6274 0 12 0C5.37258 0 0 5.40541 0 12.0733C0 18.0995 4.38823 23.0943 10.125 24V15.5633H7.07813V12.0733H10.125V9.41343C10.125 6.38755 11.9165 4.71615 14.6576 4.71615C15.9705 4.71615 17.3438 4.95195 17.3438 4.95195V7.92313H15.8306C14.3399 7.92313 13.875 8.85379 13.875 9.80857V12.0733H17.2031L16.6711 15.5633H13.875V24C19.6118 23.0943 24 18.0995 24 12.0733Z"
                               fill="white"/>
                     </g>
                     <defs>
-                        <clipPath id="clip0">
+                        <clipPath id="clip2">
                             <rect width="24" height="24" fill="white"/>
                         </clipPath>
                     </defs>
@@ -70,23 +73,25 @@
             </a>
         </div>
     </div>
-        <div class="header__logo-nav_tablet">
+    <div class="header__logo-nav_tablet">
+        <a class="header__href-homepage" href="../../index.html" title="На головну сторiнку">
             <img class="header__logo" src='../../assets/img/icons/Logo-team.png' alt="logo">
-            <nav class="contacts__nav contacts__nav-gray header__nav_big-tablet">
-                <a class="nav__@@about-active" href="#">о нас</a>
-                <a class="nav__@@services-active" href="#">послуги</a>
-                <a class="nav__active" href="#">команда</a>
-                <a class="nav__@@publication-active" href="#">публікації</a>
-                <a class="nav__@@contact-active" href="#">контакти</a>
-            </nav>
-        </div>
+        </a>
+        <nav class="contacts__nav contacts__nav-gray header__nav_big-tablet">
+            <a class="nav__@@about-active" href="../about-us/about-us.html">о нас</a>
+            <a class="nav__@@services-active" href="../services/services.html">послуги</a>
+            <a class="nav__active" href="../team/team.html">команда</a>
+            <a class="nav__@@publication-active" href="../publications/publications.html">публікації</a>
+            <a class="nav__@@contact-active" href="../contact/contact.html">контакти</a>
+        </nav>
+    </div>
     <div class="header__nav_small-tablet">
         <nav class="contacts__nav contacts__nav-gray">
-            <a class="nav__@@about-active" href="#">о нас</a>
-            <a class="nav__@@services-active" href="#">послуги</a>
-            <a class="nav__active" href="#">команда</a>
-            <a class="nav__@@publication-active" href="#">публікації</a>
-            <a class="nav__@@contact-active" href="#">контакти</a>
+            <a class="nav__@@about-active" href="../about-us/about-us.html">о нас</a>
+            <a class="nav__@@services-active" href="../services/services.html">послуги</a>
+            <a class="nav__active" href="../team/team.html">команда</a>
+            <a class="nav__@@publication-active" href="../publications/publications.html">публікації</a>
+            <a class="nav__@@contact-active" href="../contact/contact.html">контакти</a>
         </nav>
     </div>
 </div>
@@ -100,12 +105,15 @@
         <p class="contacts__phone contacts__phone-gray header__mobile_phone">+38 (050) 390 15 91</p>
     </div>
     <div class="header__mobile_bottom-string">
-        <img class="header__logo header__mobile_logo" src='../../assets/img/icons/Logo-team.png' alt="logo">
-            <svg class="header__mobile_burger-menu header__mobile_burger-menu-gray" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 10H25" stroke="#ffffff" stroke-width="2"/>
-                <path d="M7 16H25" stroke="#ffffff" stroke-width="2"/>
-                <path d="M7 22H25" stroke="#ffffff" stroke-width="2"/>
-            </svg>
+        <a class="header__href-homepage" href="../../index.html" title="На головну сторiнку">
+            <img class="header__logo header__mobile_logo" src='../../assets/img/icons/Logo-team.png' alt="logo">
+        </a>
+        <svg class="header__mobile_burger-menu header__mobile_burger-menu-gray" width="32" height="32"
+             viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 10H25" stroke="#ffffff" stroke-width="2"/>
+            <path d="M7 16H25" stroke="#ffffff" stroke-width="2"/>
+            <path d="M7 22H25" stroke="#ffffff" stroke-width="2"/>
+        </svg>
     </div>
 </div>
     </div>
@@ -216,17 +224,17 @@
         <div class="footer__contacts">
             <div class="footer__contacts-address">
                 <address>Одеса, Адміральський пр., 3</address>
-                <a href="../contact/contact.html#contact-map">Подивитися на мапі</a>
+                <a href="../contact/contact.html#contact-map" target="_blank" >Подивитися на мапі</a>
             </div>
             <div class="footer__contacts-phone">
                 <a href="#">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="#24A3FF" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0)">
+                        <g clip-path="url(#clip3)">
                             <path d="M24 12.0733C24 5.40541 18.6274 0 12 0C5.37258 0 0 5.40541 0 12.0733C0 18.0995 4.38823 23.0943 10.125 24V15.5633H7.07813V12.0733H10.125V9.41343C10.125 6.38755 11.9165 4.71615 14.6576 4.71615C15.9705 4.71615 17.3438 4.95195 17.3438 4.95195V7.92313H15.8306C14.3399 7.92313 13.875 8.85379 13.875 9.80857V12.0733H17.2031L16.6711 15.5633H13.875V24C19.6118 23.0943 24 18.0995 24 12.0733Z"
                                   fill="#24A3FF"/>
                         </g>
                         <defs>
-                            <clipPath id="clip0">
+                            <clipPath id="clip3">
                                 <rect width="24" height="24" fill="#24A3FF"/>
                             </clipPath>
                         </defs>

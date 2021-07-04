@@ -1,5 +1,5 @@
-@import "local-components/article.scss";
-@import "../../common-components/button/_main.scss";
+@import "../article/main";
+@import "../button/_main.scss";
 
 
 .publications {
@@ -7,6 +7,10 @@
   overflow-y: hidden;
   background-color: $BgGrey;
   padding: 40px 60px 0;
+
+  &__border-active {
+    border-radius: 12px 12px 0 0;
+  }
 
   &__path {
     @include Path;
@@ -32,6 +36,11 @@
     background: url("../../assets/img/Shade-white.png") center/cover no-repeat;
   }
 
+  &__art-shadow_homepage {
+    background: url("./img/Shade-white.png") center/cover no-repeat;
+
+  }
+
   &__button-wrapper {
     width: 250px;
     position: sticky;
@@ -40,8 +49,9 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1009px) {
   .publications {
+      padding: 40px 40px 0;
     &__container {
       column-count: 2;
       column-gap: 40px;
@@ -49,9 +59,9 @@
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 649px) {
   .publications {
-    height: 921px;
+    height: unset;
     padding: 20px 20px 0;
 
     &__heading {
@@ -73,7 +83,7 @@
 
     &__button-wrapper {
       position: unset;
-      margin: 20px auto;
+      margin: 0 auto 20px;
       box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
       border-radius: 12px;
     }

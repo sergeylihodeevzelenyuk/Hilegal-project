@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
-@import "../../assets/scss/reset";
-@import "../../assets/scss/assets";
-@import "../common-components/header/main";
-@import "../common-components/services/main";
-@import "../common-components/cases/main";
-@import "../common-components/clients/main";
-@import "../common-components/publications/main";
-@import "../common-components/footer/main";
-@import "local-components/advantages/main";
-@import "local-components/team-card/main";
+@import "scss/reset";
+@import "scss/assets";
+@import "../pages/common-components/header/main";
+@import "../pages/common-components/services/main";
+@import "../pages/common-components/cases/main";
+@import "../pages/common-components/clients/main";
+@import "../pages/common-components/publications-comp/main";
+@import "../pages/common-components/footer/main";
+@import "../pages/homepage/local-components/advantages/main";
+@import "../pages/homepage/local-components/team-card/main";
 
 
 .page__wrapper {
@@ -22,7 +22,7 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background: url("../../assets/img/PatternSplash.png") center/cover no-repeat;
+    background: url("./img/PatternSplash.png") center/cover no-repeat;
   }
 
   &__heading {
@@ -41,7 +41,7 @@
     transform: translateX(-50%);
     width: 595px;
     height: 687px;
-    background: url("../../assets/img/SymbolLongleg.png") center /contain no-repeat;
+    background: url("./img/SymbolLongleg.png") center /contain no-repeat;
   }
 
   &__art-shadow {
@@ -50,7 +50,7 @@
     left: 0;
     right: 0;
     height: 200px;
-    background: url("../../assets/img/Shade.png") center / cover no-repeat;
+    background: url("./img/Shade.png") center / cover no-repeat;
   }
 
   &__button-scroll-down {
@@ -72,7 +72,7 @@
 @media (max-width: 414px) {
   .hallo {
     &__section {
-      background: url("../../assets/img/Pattern.png") center/cover no-repeat;
+      background: url("./img/Pattern.png") center/cover no-repeat;
     }
 
     &__logo-heading_wrapper {
@@ -131,15 +131,14 @@
   border-bottom-left-radius: 12px;
   position: relative;
   top: -1px;
-  min-height: 1374px;
-  background: url("../../assets/img/Bg.png") center/cover no-repeat;
+  background: url("./img/Bg.png") center/cover no-repeat;
 
   &__art-wrapper {
     position: relative;
     bottom: -20px;
     width: 100%;
     height: 20px;
-    background-image: url("../../assets/img/Card-shadow.png");
+    background-image: url("./img/Card-shadow.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
@@ -147,7 +146,7 @@
 
 @media (max-width: 414px) {
   .main__art-wrapper {
-    background-image: url("../../assets/img/Card-shadow-mobile.png");
+    background-image: url("./img/Card-shadow-mobile.png");
   }
 }
 

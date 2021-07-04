@@ -1,65 +1,66 @@
-<div class="publications">
+<div class="publications publications__border-@@status">
     <span class="publications__path">Публікації</span>
     <h4 class="publications__heading">@@heading</h4>
     <div class="publications__container">
         <div class="article__wrapper">
-            @@include('./local-components/article.html', {
+            @@include('../article/article.html', {
             "visibility":"hidden",
-            "path":"'../../assets/img/publication-photo-2.png'",
+            "path":"'@@prefix/assets/img/publication-photo-2.png'",
             "heading":"Валютний контроль помер, хай живе валютний контроль!",
             "date":"14 червня",
             "text":"Експерти проводять конференції, круглі столи та іншого штибу заходи на тему «лібералізація валютного законодавства». Юристи-експерти-новелісти стирають пальці об «ctrl+c/ctrl+v»."
             })
         </div>
         <div class="article__wrapper">
-            @@include('./local-components/article.html', {
+            @@include('../article/article.html', {
             "visibility":"",
-            "path":"'../../assets/img/publication-photo-2.png'",
+            "path":"'@@prefix/assets/img/publication-photo-2.png'",
             "heading":"Заповіт міленіала",
             "date":"19 серпня",
             "text":"Що і як передаватимуть у спадщину сучасні влогери, опініон лідери і криптомільйонери Типовий спадок українського покоління Х виглядає так: квартира у…"
             })
         </div>
         <div class="article__wrapper">
-            @@include('./local-components/article.html', {
+            @@include('../article/article.html', {
             "visibility":"",
-            "path":"'../../assets/img/publication-photo.png'",
+            "path":"'@@prefix/assets/img/publication-photo.png'",
             "heading":"Equity associate",
             "date":"22 квітня",
             "text":"На проектах я джун. При цьому я співвласник юридичної фірми. Як це відбулося. Перед вступом батьки мені казали, що якщо буду…"
             })
         </div>
         <div class="article__wrapper">
-            @@include('./local-components/article.html', {
+            @@include('../article/article.html', {
             "visibility":"",
-            "path":"'../../assets/img/publication-photo-4.png'",
+            "path":"'@@prefix/assets/img/publication-photo-4.png'",
             "heading":"Закон про мови: як зробити свій сайт відповідним",
             "date":"19 серпня",
             "text":"Наталія Кирик, керівник контент студії Wordfactory.ua По-перше, це красиво! Це аргумент номер один на користь україномовного сайту. По-друге, це ефективно. У…"
             })
         </div>
         <div class="article__wrapper">
-            @@include('./local-components/article.html', {
+            @@include('../article/article.html', {
             "visibility":"",
-            "path":"'../../assets/img/publication-photo-5.png'",
+            "path":"'@@prefix/assets/img/publication-photo-5.png'",
             "heading":"Штраф для «Корпорації добра»: що буде з Google та іншими за порушення GDPR",
             "date":"29 вересня",
             "text":"І чому стягнення у 50 млн євро може стати доленосним прецедентом За матеріалами Mind.ua 21 січня Національна комісія із захисту даних."
             })
         </div>
         <div class="article__wrapper">
-            @@include('./local-components/article.html', {
+            @@include('../article/article.html', {
             "visibility":"",
-            "path":"'../../assets/img/publication-photo-6.png'",
+            "path":"'@@prefix/assets/img/publication-photo-6.png'",
             "heading":"Компенсація витрат на навчання дитини в дитячому садку та школі",
             "date":"5 Лютого 2018",
             "text":"Про що йде мова В червні цього року Верховна Рада внесла зміни до Податкового кодексу України. Відтепер батьки, які отримують офіційну…"
             })
         </div>
     </div>
-    <div class="publications__art-shadow publications__art-shadow_mobile"></div>
+    <div class="publications__art-shadow publications__art-shadow_mobile publications__art-shadow_@@page"></div>
     <div class="publications__button-wrapper">
         @@include('../button/button.html', {
+        "type":"button",
         "text":"Ще публікації"
         })
     </div>

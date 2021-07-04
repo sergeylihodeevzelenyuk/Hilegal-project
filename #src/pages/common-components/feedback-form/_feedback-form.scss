@@ -41,9 +41,13 @@
   }
 
   &__button-wrapper {
-    width: 250px;
-    margin: 0 auto;
-    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
-    border-radius: 12px;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 649px) {
+  .feedback__heading {
+    @include font-style(22px, 26px, $AccentRed, 600);
   }
 }

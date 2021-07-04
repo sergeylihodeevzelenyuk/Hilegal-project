@@ -3,13 +3,13 @@ let source_folder = "#src";
 
 let path = {
     build: {
-        html: project_folder + "/pages/",
-        css: project_folder + "/pages/",
+        html: project_folder,
+        css: project_folder,
         img: project_folder + "/assets/",
     },
     src: {
-        html: [source_folder + "/pages/**/{about-us,index,services,service-page,team,team-member-page,contact}.html"],
-        css: source_folder + "/pages/**/main.scss",
+        html: [source_folder + "/**/{about-us,index,services,service-page,team,team-member-page,contact,publications,publications-entry}.html"],
+        css: source_folder + "/**/main.scss",
         img: source_folder + "/assets/**/*.{jpg,jpeg,png,svg}",
     },
     watch: {

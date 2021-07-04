@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="image/x-icon" rel="shortcut icon" href="../../assets/img/icons/favicon.png">
     <link rel="stylesheet" type="text/css" href="./main.css">
     <link rel="alternate" hreflang="ru" href="http://ru.example.com/"/>
     <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
-    <title>Hlegal. Послуги</title>
+    <title>Hlegal. О нас</title>
 </head>
 <body>
 <div class="page__wrapper">
     <div class="header__wrapper">
         @@include('../common-components/header/header.html', {
         "path":"'../../assets/img/Logo-about-us.svg'",
+        "logoPrefix":"../..",
+        "menuPrefix":"..",
         "forWhiteBg":"gray",
         "about-active":"active"
         })
@@ -89,6 +92,7 @@
         </div>
     </main>
     @@include('../common-components/footer/footer.html', {
+    "prefix":"..",
     "border-visibility": "border-top-separate"
     })
 </div>

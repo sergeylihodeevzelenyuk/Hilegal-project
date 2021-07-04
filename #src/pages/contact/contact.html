@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="image/x-icon" rel="shortcut icon" href="../../assets/img/icons/favicon.png">
     <link rel="stylesheet" type="text/css" href="./main.css">
     <link rel="alternate" hreflang="ru" href="http://ru.example.com/"/>
     <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
-    <title>Hlegal. Команда</title>
+    <title>Hlegal. Контакти</title>
 </head>
 <body>
 <div class="page__wrapper">
     <div class="header__wrapper">
         @@include('../common-components/header/header.html', {
         "path":"'../../assets/img/Logo-contacts.png'",
+        "logoPrefix":"../..",
+        "menuPrefix":"..",
         "forWhiteBg":"gray",
         "contact-active":"active"
         })
@@ -50,7 +53,9 @@
                     width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </main>
-    @@include('../common-components/footer/footer.html')
+    @@include('../common-components/footer/footer.html',{
+    "prefix":".."
+    })
 </div>
 </body>
 </html>

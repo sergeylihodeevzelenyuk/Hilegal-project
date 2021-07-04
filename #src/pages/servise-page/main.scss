@@ -4,7 +4,7 @@
 @import "../common-components/header/_main.scss";
 @import "../common-components/services/_main.scss";
 @import "../common-components/cases/_main.scss";
-@import "../common-components/publications/_main.scss";
+@import "../common-components/publications-comp/_main.scss";
 @import "../common-components/footer/_main.scss";
 
 .page__wrapper {
@@ -70,14 +70,37 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1009px) {
   .publication__details {
-    max-width: unset;
-    margin: 0 20px 0;
-    padding: 20px 0 0;
+    max-width: 100%;
+    padding: 20px 40px 60px;
+  }
+}
 
-    ul {
-      column-count: 1;
+@media (max-width: 649px) {
+  .publication {
+    &__wrapper {
+      max-width: 100%;
+      text-align: left;
+      padding: 0 20px;
+    }
+
+    &__button-wrapper {
+      margin: 0 auto 40px;
+    }
+
+    &__details {
+      max-width: unset;
+      margin: 0 20px 0;
+      padding: 20px 0 0;
+
+      ul {
+        column-count: 1;
+      }
     }
   }
 }
+
+
+
+

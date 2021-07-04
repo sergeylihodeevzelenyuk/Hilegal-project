@@ -81,6 +81,10 @@ select {
   display: none;
 }
 
+.header__href-homepage {
+  cursor: pointer;
+}
+
 .contacts__block {
   display: flex;
   justify-content: flex-end;
@@ -354,8 +358,9 @@ select {
   font-size: 12px;
   line-height: 14px;
   color: #24A3FF;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 @media (min-width: 541px) {
@@ -370,13 +375,17 @@ select {
   }
 }
 
+.footer__contacts-address a:hover {
+  color: #F0145A;
+}
+
 .footer__contacts-phone {
   display: flex;
   align-items: center;
 }
 
 .footer__contacts-phone a svg path:hover {
-  fill: #B3B3BA;
+  fill: #F0145A;
 }
 
 .footer__contacts-phone span {
@@ -398,6 +407,10 @@ select {
     border-radius: 50%;
     background-color: #B3B3BA;
   }
+}
+
+.footer__contacts-phone span:hover {
+  color: #F0145A;
 }
 
 .footer__contacts-phone p {
@@ -492,11 +505,10 @@ select {
 }
 
 .common__button {
-  width: 100%;
+  width: 250px;
   padding: 16px 17px 17px;
   background-color: #24A3FF;
   border: #24A3FF;
-  border-radius: 12px;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 17px;
@@ -505,10 +517,18 @@ select {
   text-align: center;
   cursor: pointer;
   transition: 6ms;
+  box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
 }
 
 .common__button:hover {
-  transform: scale(1.1);
+  background-color: #0085FF;
+  box-shadow: 0 0 30px rgba(36, 163, 255, 0.5);
+}
+
+.common__button:active {
+  background-color: #006CCF;
+  box-shadow: unset;
 }
 
 .feedback {
@@ -569,10 +589,17 @@ select {
 }
 
 .feedback__button-wrapper {
-  width: 250px;
-  margin: 0 auto;
-  box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
-  border-radius: 12px;
+  text-align: center;
+}
+
+@media (max-width: 649px) {
+  .feedback__heading {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    color: #F0145A;
+    font-weight: 600;
+  }
 }
 
 .page__wrapper {
@@ -650,4 +677,36 @@ select {
 .contact__map-wrapper {
   position: relative;
   top: 7px;
+}
+
+@media (max-width: 1009px) {
+  .contact__container {
+    width: 100%;
+    padding: 0 40px 0;
+  }
+  .contact__info {
+    margin: 0 40px 0 0;
+  }
+}
+
+@media (max-width: 649px) {
+  .header__wrapper {
+    margin: 0 0 20px;
+  }
+  .contact__container {
+    flex-direction: column;
+    padding: 0;
+    margin: 0 0 20px;
+  }
+  .contact__info {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 0 20px;
+  }
+  .contact__form {
+    width: 100%;
+  }
+  .feedback {
+    border-radius: unset;
+  }
 }

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="image/x-icon" rel="shortcut icon" href="../../assets/img/icons/favicon.png">
     <link rel="stylesheet" type="text/css" href="./main.css">
     <link rel="alternate" hreflang="ru" href="http://ru.example.com/"/>
     <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
@@ -14,12 +15,15 @@
         <div class="header__wrapper">
             @@include('../common-components/header/header.html', {
             "path":"'../../assets/img/icons/LogoServices.svg'",
+            "logoPrefix":"../..",
+            "menuPrefix":"..",
             "services-active":"active"
             })
         </div>
         <div class="publication__wrapper">
-            @@include('../common-components/services/local-components/section.html', {
+            @@include('../common-components/service-section/section.html', {
             "path":"'../../assets/img/icons/Basket.svg'",
+            "size":"big",
             "heading":'IT та електронна комерція',
             "HeadingColor":"red",
             "text":"Нескінчений потік договорів, податкові питання, трудові відносини, корпоративні папери — юридична робота відволікає вас від ведення бізнесу. Але роботи не так вже й багато, щоб наймати інхауз-юриста.<br><br>До того ж, з часом робота стане однотипною і нецікавою для штатного юриста. А ще ми добре знаємо, як важко в Україні знайти хорошого кандидата з досвідом у сфері інформаційних технологій."
@@ -27,6 +31,7 @@
         </div>
         <div class="publication__button-wrapper">
             @@include('../common-components/button/button.html', {
+            "type":"button",
             "text":"Безкоштовна консультація"
             })
         </div>
@@ -48,10 +53,12 @@
     <div class="cases__wrapper">
         @@include('../common-components/cases/cases.html')
     </div>
-    @@include('../common-components/publications/publications.html', {
+    @@include('../common-components/publications-comp/publications-comp.html', {
+    "prefix":"../..",
     "heading":"Рекомендуємо"
     })
     @@include('../common-components/footer/footer.html', {
+    "prefix":"..",
     "border-visibility": "border-top-separate"
     })
 </div>

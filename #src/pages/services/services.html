@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="image/x-icon" rel="shortcut icon" href="../../assets/img/icons/favicon.png">
     <link rel="stylesheet" type="text/css" href="./main.css">
     <link rel="alternate" hreflang="ru" href="http://ru.example.com/"/>
     <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
@@ -14,19 +15,26 @@
         <div class="header__wrapper">
             @@include('../common-components/header/header.html', {
             "path":"'../../assets/img/icons/LogoServices.svg'",
+            "logoPrefix":"../..",
+            "menuPrefix":"..",
             "services-active":"active"
             })
         </div>
         @@include('../common-components/services/services-comp.html', {
-        "visibility":"hidden"
+        "visibility":"hidden",
+        "prefix":"../.."
         })
         <div class="hallo__art-wrapper hallo__art-wrapper_relative"></div>
     </div>
     <div class="cases__wrapper">
         @@include('../common-components/cases/cases.html')
     </div>
-    @@include('../common-components/clients/clients.html')
-    @@include('../common-components/footer/footer.html')
+    @@include('../common-components/clients/clients.html', {
+    "prefix":"../.."
+    })
+    @@include('../common-components/footer/footer.html', {
+    "prefix":".."
+    })
 </div>
 </body>
 </html>
