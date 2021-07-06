@@ -14,6 +14,7 @@
     <div class="hallo__section">
         @@include('./pages/common-components/header/header.html', {
         "path":"'./assets/img/icons/Logo-Min.png'",
+        "burger-logo-path":"'./assets/img/icons/Logo_sub_small.svg'",
         "logoPrefix":".",
         "menuPrefix":"./pages"
         })
@@ -23,11 +24,27 @@
             <h1 class="hallo__heading">системний адміністратор правових рішень</h1>
         </div>
         <div class="hallo__art-shadow"></div>
-        <div class="hallo__button-scroll-down">
-            <a href="#main">
+        <a href="#main">
+            <div class="hallo__button-scroll-down">
                 <img src="assets/img/icons/Scroll_down.svg" alt="scroll down icon">
-            </a>
-        </div>
+            </div>
+        </a>
+        <script>
+            const anchors = document.querySelectorAll('a[href*="#"]')
+
+            for (let anchor of anchors) {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault()
+
+                    const blockID = anchor.getAttribute('href').substr(1)
+
+                    document.getElementById(blockID).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    })
+                })
+            }
+        </script>
     </div>
     <div class="main" id="main">
         @@include('./pages/homepage/local-components/advantages/advantages.html')

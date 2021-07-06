@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
-@import "scss/reset";
-@import "scss/assets";
-@import "../pages/common-components/header/main";
-@import "../pages/common-components/services/main";
-@import "../pages/common-components/cases/main";
-@import "../pages/common-components/clients/main";
-@import "../pages/common-components/publications-comp/main";
-@import "../pages/common-components/footer/main";
-@import "../pages/homepage/local-components/advantages/main";
-@import "../pages/homepage/local-components/team-card/main";
+@import "./scss/reset";
+@import "./scss/assets";
+@import "../pages/common-components/header/_main.scss";
+@import "../pages/common-components/services/_main.scss";
+@import "../pages/common-components/cases/_main.scss";
+@import "../pages/common-components/clients/_main.scss";
+@import "../pages/common-components/publications-comp/_main";
+@import "../pages/common-components/footer/_main.scss";
+@import "../pages/homepage/local-components/advantages/_main";
+@import "../pages/homepage/local-components/team-card/_main.scss";
 
 
 .page__wrapper {

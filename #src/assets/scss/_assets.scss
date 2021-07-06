@@ -49,7 +49,7 @@ $main-radius: 8px;
 @mixin Path(
   $color: $ActiveBlue,
   $opacity: 1,
-  $linkArrow: "../../assets/img/icons/Link-arrow-blue.svg",) {
+  $linkArrow: "./img/icons/Link-arrow-blue.svg",) {
   display: inline-block;
   margin: 0 0 3px 0;
   @include font-style(14px, 17px, $color, 500);

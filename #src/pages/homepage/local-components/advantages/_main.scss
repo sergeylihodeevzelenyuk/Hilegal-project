@@ -1,4 +1,3 @@
-
 .advantages {
 
   &__container {
@@ -19,14 +18,19 @@
     flex-grow: 1;
     padding: 0 40px 20px 0;
     border-right: 4px solid $TextGrey;
+    cursor: pointer;
 
     &:last-child {
       padding-bottom: 0;
     }
 
-    &:hover, &:first-child {
+    &_active {
       color: $AccentRed;
       @include GradientTextRed;
+      border-color: $AccentRed;
+    }
+
+    &:hover {
       border-color: $AccentRed;
     }
 
@@ -104,10 +108,15 @@
 
     &__pagination-mobile {
       display: block;
+    }
 
-      span {
-        @include PaginationBlueDot;
+    &__dot-mob {
+      @include PaginationBlueDot;
+
+      &_active {
+        opacity: 1;
       }
     }
   }
 }
+

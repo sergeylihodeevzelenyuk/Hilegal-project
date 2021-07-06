@@ -17,6 +17,14 @@
     width: 413px;
     height: 500px;
     background: url("img/Team-member.png") center / cover no-repeat;
+
+    &_second {
+      background: url("img/Team-member-2.png") center / cover no-repeat;
+    }
+
+    &_third {
+      background: url("img/Team-member-3.png") center / cover no-repeat;
+    }
   }
 
   &__description {
@@ -47,12 +55,21 @@
     width: 90px;
     left: calc(50%);
     transform: translateX(-50%);
+  }
 
-    span {
-      @include PaginationBlueDot;
+  &__dot {
+    @include PaginationBlueDot;
+
+    &:hover {
+      opacity: 0.4;
+    }
+
+    &_active {
+      opacity: 1;
     }
   }
 }
+
 
 @media (max-width: 1110px) {
   .team-card__heading {

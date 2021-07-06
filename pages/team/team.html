@@ -108,14 +108,39 @@
         <a class="header__href-homepage" href="../../index.html" title="На головну сторiнку">
             <img class="header__logo header__mobile_logo" src='../../assets/img/icons/Logo-team.png' alt="logo">
         </a>
-        <svg class="header__mobile_burger-menu header__mobile_burger-menu-gray" width="32" height="32"
-             viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg onclick="myFunction()" class="header__mobile_burger-menu header__mobile_burger-menu-gray"
+             width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7 10H25" stroke="#ffffff" stroke-width="2"/>
             <path d="M7 16H25" stroke="#ffffff" stroke-width="2"/>
             <path d="M7 22H25" stroke="#ffffff" stroke-width="2"/>
         </svg>
     </div>
+    <div id="burgerOpen" class="header__mobile-menu">
+        <div class="header__mobile-menu-top">
+            <div class="logo__wrapper">
+                <a href="../../index.html" title="На головну сторiнку">
+                    <img src='../../assets/img/icons/Logo_sub_small.svg' alt="Лого">
+                </a>
+            </div>
+        </div>
+        <nav class="contacts__nav contacts__nav-gray header__mobile-menu_nav">
+            <a class="nav__@@about-active" href="../about-us/about-us.html">о нас</a>
+            <a class="nav__@@services-active" href="../services/services.html">послуги</a>
+            <a class="nav__active" href="../team/team.html">команда</a>
+            <a class="nav__@@publication-active" href="../publications/publications.html">публікації</a>
+            <a class="nav__@@contact-active" href="../contact/contact.html">контакти</a>
+        </nav>
+    </div>
 </div>
+
+
+<script>
+    function myFunction() {
+        document.getElementById("burgerOpen").classList.toggle("header__mobile-menu_active");
+    }
+</script>
+
+
     </div>
     <main class="main">
         <h2 class="main__heading">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу,
@@ -131,7 +156,7 @@
             <span>Керуючий партнер</span>
         </div>
         <div class="team-card__button">
-            <a href="#">
+            <a href="../team-member-page/team-member-page.html">
                 <img src="../../assets/img/icons/Button-open-team.png" alt="кнопка">
             </a>
         </div>
@@ -147,7 +172,7 @@
             <span>Equity partner, Attorney-at-law</span>
         </div>
         <div class="team-card__button">
-            <a href="#">
+            <a href="../team-member-page/team-member-page.html">
                 <img src="../../assets/img/icons/Button-open-team.png" alt="кнопка">
             </a>
         </div>
@@ -163,7 +188,7 @@
             <span>Associate</span>
         </div>
         <div class="team-card__button">
-            <a href="#">
+            <a href="../team-member-page/team-member-page.html">
                 <img src="../../assets/img/icons/Button-open-team.png" alt="кнопка">
             </a>
         </div>
@@ -179,7 +204,7 @@
             <span>Associate</span>
         </div>
         <div class="team-card__button">
-            <a href="#">
+            <a href="../team-member-page/team-member-page.html">
                 <img src="../../assets/img/icons/Button-open-team.png" alt="кнопка">
             </a>
         </div>
@@ -195,7 +220,7 @@
             <span>Equity partner, Attorney-at-law</span>
         </div>
         <div class="team-card__button">
-            <a href="#">
+            <a href="../team-member-page/team-member-page.html">
                 <img src="../../assets/img/icons/Button-open-team.png" alt="кнопка">
             </a>
         </div>
@@ -211,7 +236,7 @@
             <span>Associate, Attorney-at-law</span>
         </div>
         <div class="team-card__button">
-            <a href="#">
+            <a href="../team-member-page/team-member-page.html">
                 <img src="../../assets/img/icons/Button-open-team.png" alt="кнопка">
             </a>
         </div>

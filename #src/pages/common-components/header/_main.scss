@@ -173,6 +173,49 @@
         height: 31px;
       }
     }
+
+    /*For opened burger menu*/
+
+    &__mobile-menu-top {
+      padding: 16px 0 14px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__mobile-menu {
+      display: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $white;
+      z-index: 1;
+
+      &_nav {
+        flex-direction: column;
+        text-align: center;
+        background-color: $BgGrey;
+
+        & a {
+          padding: 11px 0 15px 0;
+          margin: 0;
+          border-bottom: solid 2px $white;
+
+          &:active {
+            border-bottom: solid 2px $white;
+          }
+        }
+      }
+
+      .nav__active {
+        border-bottom: solid 2px $white;
+      }
+
+      &_active {
+        display: block;
+      }
+    }
   }
 }
 
@@ -244,6 +287,8 @@
     }
   }
 }
+
+
 
 
 

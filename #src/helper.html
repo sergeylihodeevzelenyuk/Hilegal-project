@@ -1,0 +1,18 @@
+
+onclick="openMobileNav()"
+    <div class="header__mobile-nav"></div>
+
+<script>
+    function openMobileNav() {
+        var mobileNav = document.getElementsByClassName("header__mobile-nav");
+        mobileNav.style.display = "block";
+        mobileNav.className += " header__mobile-nav_active";
+    };
+    openMobileNav();
+</script>
+
+<script>
+    document.querySelector('.header__mobile_burger-menu').addEventListener('click', function () {
+        document.querySelector('.header__mobile-nav').classList.toggle('active');
+    })
+</script>

@@ -4,7 +4,7 @@
   padding: 0 40px 0;
 
   &__path {
-    @include Path($white, 50%, "../../assets/img/icons/Link-arrow-white.svg");
+    @include Path($white, 50%, "./img/icons/Link-arrow-white.svg");
     margin: 0 0 3px 20px;
   }
 
