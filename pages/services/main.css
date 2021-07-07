@@ -947,6 +947,7 @@ select {
 
 .body__overflow-hidden {
   overflow: hidden;
+  position: relative;
 }
 
 .page__wrapper {
