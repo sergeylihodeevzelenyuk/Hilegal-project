@@ -16,14 +16,24 @@
     flex-shrink: 0;
     width: 413px;
     height: 500px;
+    border-radius: 12px 0 0 12px;
+    overflow: hidden;
     background: url("img/Team-member.png") center / cover no-repeat;
+    background-size: 100% 100%;
+    transition: background-size 0.7s ease;
+
+    &:hover {
+      background-size: 110% 110%;
+    }
 
     &_second {
       background: url("img/Team-member-2.png") center / cover no-repeat;
+      background-size: 100% 100%;
     }
 
     &_third {
       background: url("img/Team-member-3.png") center / cover no-repeat;
+      background-size: 100% 100%;
     }
   }
 
@@ -110,6 +120,18 @@
         margin: 0 10px 0 0;
         border-radius: 50%;
         background: url("img/Team-member-mobile.png") center / contain no-repeat;
+      }
+    }
+
+    &__container_second {
+      .team-card__member::before {
+        background: url("img/Team-member-1-mobile.png") center / contain no-repeat;
+      }
+    }
+
+    &__container_third {
+      .team-card__member::before {
+        background: url("img/Team-member-2-mobile.png") center / contain no-repeat;
       }
     }
 

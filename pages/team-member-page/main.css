@@ -257,6 +257,10 @@ select {
     display: flex;
     justify-content: center;
   }
+  .header .close__wrapper {
+    position: absolute;
+    right: 10px;
+  }
   .header__mobile-menu {
     display: none;
     position: absolute;
@@ -275,16 +279,19 @@ select {
   .header__mobile-menu_nav a {
     padding: 11px 0 15px 0;
     margin: 0;
-    border-bottom: solid 2px #ffffff;
+    border-bottom: solid 2px #ffffff !important;
   }
   .header__mobile-menu_nav a:active {
-    border-bottom: solid 2px #ffffff;
+    border-bottom: solid 2px #ffffff !important;
   }
   .header__mobile-menu .nav__active {
-    border-bottom: solid 2px #ffffff;
+    border-bottom: solid 2px #ffffff !important;
   }
   .header__mobile-menu_active {
     display: block;
+  }
+  .header__mobile-menu_hidden {
+    display: none;
   }
 }
 
@@ -518,6 +525,10 @@ select {
   }
 }
 
+.body__overflow-hidden {
+  overflow: hidden;
+}
+
 .page__wrapper {
   min-width: 320px;
   max-width: 1600px;
@@ -533,15 +544,22 @@ select {
   width: 76%;
   margin: 0 auto 80px;
   display: flex;
+  align-items: start;
 }
 
 .team-member__img {
   margin: 0 40px 0 0;
   flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .team-member__img img {
-  border-radius: 12px;
+  transition: 0.8s;
+}
+
+.team-member__img img:hover {
+  transform: scale(1.1);
 }
 
 .team-member__name {
@@ -568,12 +586,16 @@ select {
   font-weight: 600;
 }
 
-.team-member__mail span, .team-member__linkdin span {
+.team-member__mail, .team-member__linkdin span {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 19px;
   color: #24A3FF;
   font-weight: 600;
+}
+
+.team-member__mail:hover, .team-member__linkdin span:hover {
+  color: #F0145A;
 }
 
 .team-member__about {
@@ -624,7 +646,7 @@ select {
 }
 
 @media (min-width: 1070px) {
-  .team-member__mail span::before, .team-member__linkdin span::before {
+  .team-member__mail::before, .team-member__linkdin span::before {
     display: inline-block;
     content: "";
     margin: 0 10px 2px;

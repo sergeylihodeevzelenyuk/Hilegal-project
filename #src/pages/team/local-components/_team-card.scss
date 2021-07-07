@@ -4,9 +4,15 @@
 
   &__img {
     margin: 0 0 20px;
+    border-radius: 12px;
+    overflow: hidden;
 
     img {
-      border-radius: 12px;
+      transition: 0.8s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -39,15 +45,9 @@
   }
 }
 
-@media (min-width: 900px) and (max-width: 1199px) {
+@media (min-width: 416px) and (max-width: 1199px) {
   .team-card {
     flex-basis: 250px;
-  }
-}
-
-@media (min-width: 416px) and (max-width: 899px) {
-  .team-card {
-    flex-basis: 200px;
   }
 }
 
@@ -100,6 +100,20 @@
 
       span {
         font-size: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 620px) {
+  .team-card {
+    &__button {
+      margin: 3px 0 0;
+      cursor: pointer;
+      transition: 0.4s;
+
+      &:hover {
+        transform: scale(1.3);
       }
     }
   }

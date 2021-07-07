@@ -9,7 +9,7 @@
     <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
     <title>Hlegal. Юридична контора</title>
 </head>
-<body>
+<body id="body">
 <div class="page__wrapper">
     <div class="hallo__section">
         @@include('./pages/common-components/header/header.html', {
@@ -24,11 +24,14 @@
             <h1 class="hallo__heading">системний адміністратор правових рішень</h1>
         </div>
         <div class="hallo__art-shadow"></div>
-        <a href="#main">
             <div class="hallo__button-scroll-down">
-                <img src="assets/img/icons/Scroll_down.svg" alt="scroll down icon">
+                <a href="#main">
+                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle opacity="0.5" cx="21" cy="21" r="20.5" stroke="white"/>
+                    <path d="M12 18L21 27L30 18" stroke="white" stroke-width="2"/>
+                </svg>
+                </a>
             </div>
-        </a>
         <script>
             const anchors = document.querySelectorAll('a[href*="#"]')
 
@@ -49,7 +52,8 @@
     <div class="main" id="main">
         @@include('./pages/homepage/local-components/advantages/advantages.html')
         @@include('./pages/common-components/services/services-comp.html',{
-        "prefix":"."})
+        "prefix":"."
+        })
         <div class="main__art-wrapper main__art-wrapper_relative"></div>
     </div>
     @@include('./pages/homepage/local-components/team-card/team-card.html')

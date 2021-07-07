@@ -9,7 +9,7 @@
     <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
     <title>Hlegal. Юридична контора</title>
 </head>
-<body>
+<body id="body">
 <div class="page__wrapper">
     <div class="hallo__section">
         <div class="header header__desktop">
@@ -108,19 +108,25 @@
         <a class="header__href-homepage" href="./index.html" title="На головну сторiнку">
             <img class="header__logo header__mobile_logo" src='./assets/img/icons/Logo-Min.png' alt="logo">
         </a>
-        <svg onclick="myFunction()" class="header__mobile_burger-menu header__mobile_burger-menu-@@font-color"
+        <svg onclick="burgerOpen()" class="header__mobile_burger-menu header__mobile_burger-menu-@@font-color"
              width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7 10H25" stroke="#ffffff" stroke-width="2"/>
             <path d="M7 16H25" stroke="#ffffff" stroke-width="2"/>
             <path d="M7 22H25" stroke="#ffffff" stroke-width="2"/>
         </svg>
     </div>
-    <div id="burgerOpen" class="header__mobile-menu">
+    <div id="burger" class="header__mobile-menu">
         <div class="header__mobile-menu-top">
             <div class="logo__wrapper">
                 <a href="./index.html" title="На головну сторiнку">
                     <img src='./assets/img/icons/Logo_sub_small.svg' alt="Лого">
                 </a>
+            </div>
+            <div class="close__wrapper" onclick="burgerClose()">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 7L25 25" stroke="#EC6F5D" stroke-width="2"/>
+                    <path d="M25 7L7 25" stroke="#EC6F5D" stroke-width="2"/>
+                </svg>
             </div>
         </div>
         <nav class="contacts__nav contacts__nav-gray header__mobile-menu_nav">
@@ -133,10 +139,17 @@
     </div>
 </div>
 
-
 <script>
-    function myFunction() {
-        document.getElementById("burgerOpen").classList.toggle("header__mobile-menu_active");
+    function burgerOpen() {
+        document.getElementById("burger").classList.toggle("header__mobile-menu_hidden", false);
+        document.getElementById("burger").classList.toggle("header__mobile-menu_active");
+        document.getElementById("body").classList.toggle("body__overflow-hidden");
+    }
+
+    function burgerClose() {
+        document.getElementById("burger").classList.toggle("header__mobile-menu_active", false);
+        document.getElementById("body").classList.toggle("body__overflow-hidden", false);
+        document.getElementById("burger").classList.toggle("header__mobile-menu_hidden");
     }
 </script>
 
@@ -147,11 +160,14 @@
             <h1 class="hallo__heading">системний адміністратор правових рішень</h1>
         </div>
         <div class="hallo__art-shadow"></div>
-        <a href="#main">
             <div class="hallo__button-scroll-down">
-                <img src="assets/img/icons/Scroll_down.svg" alt="scroll down icon">
+                <a href="#main">
+                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle opacity="0.5" cx="21" cy="21" r="20.5" stroke="white"/>
+                    <path d="M12 18L21 27L30 18" stroke="white" stroke-width="2"/>
+                </svg>
+                </a>
             </div>
-        </a>
         <script>
             const anchors = document.querySelectorAll('a[href*="#"]')
 
@@ -219,10 +235,6 @@
     var slideIndex = 1;
     showSlides(slideIndex);
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
     function currentSlide(n) {
         showSlides(slideIndex = n);
     }
@@ -247,7 +259,9 @@
     }
 </script>
         <div class="services">
-  <span class="services__path services__path-@@visibility">послуги</span>
+  <span class="services__path services__path-@@visibility">
+    <a href="./pages/services/services.html">послуги</a>
+  </span>
   <h2>Що ми вміємо робити краще за інших?</h2>
   <div class="services__container">
     <div class="section__wrapper">
@@ -255,7 +269,9 @@
     <div class="section__logo section__logo_@@size">
         <img src='./assets/img/icons/Basket.svg' alt="logo">
     </div>
-    <h4 class="section__heading section__heading_@@HeadingColor">IT та електронна комерція</h4>
+    <h4 class="section__heading section__heading_@@HeadingColor">
+        <a href=./pages/service-page/service-page.html>IT та електронна комерція</a>
+    </h4>
 </div>
 <p class="section__text">Нескінчений потік договорів, податкові питання, трудові відносини, корпоративні папери — юридична робота відволікає вас від ведення бізнесу. Але роботи не так вже й багато, щоб наймати інхауз-юриста.</p>
 
@@ -265,7 +281,9 @@
     <div class="section__logo section__logo_@@size">
         <img src='./assets/img/icons/Brif-bag.svg' alt="logo">
     </div>
-    <h4 class="section__heading section__heading_@@HeadingColor">Комплексний щоденний юридичний супровід</h4>
+    <h4 class="section__heading section__heading_@@HeadingColor">
+        <a href=./pages/service-page/service-page.html>Комплексний щоденний юридичний супровід</a>
+    </h4>
 </div>
 <p class="section__text">До того ж, з часом робота стане однотипною і нецікавою для штатного юриста. А ще ми добре знаємо, як важко в Україні знайти хорошого кандидата з досвідом у сфері інформаційних технологій.</p>
 
@@ -275,7 +293,9 @@
     <div class="section__logo section__logo_@@size">
         <img src='./assets/img/icons/Structure.svg' alt="logo">
     </div>
-    <h4 class="section__heading section__heading_@@HeadingColor">Структуризація корпоративних відносин</h4>
+    <h4 class="section__heading section__heading_@@HeadingColor">
+        <a href=./pages/service-page/service-page.html>Структуризація корпоративних відносин</a>
+    </h4>
 </div>
 <p class="section__text">Замість просто надавати юридичні послуги, ми закріпимо юриста або цілу команду, які впишуться в повсякденне життя вашої компанії.</p>
 
@@ -285,7 +305,9 @@
     <div class="section__logo section__logo_@@size">
         <img src='./assets/img/icons/Partnership.svg' alt="logo">
     </div>
-    <h4 class="section__heading section__heading_@@HeadingColor">Побудовa договірних відносин</h4>
+    <h4 class="section__heading section__heading_@@HeadingColor">
+        <a href=./pages/service-page/service-page.html>Побудовa договірних відносин</a>
+    </h4>
 </div>
 <p class="section__text">Раз на тиждень, чи тиждень на місяць у вас під боком є ваш власний юрист. Будь-хто в компанії може впіймати його біля кавоварки і просто поговорити про поточні справи замість очікування статусу update.</p>
 
@@ -295,7 +317,9 @@
     <div class="section__logo section__logo_@@size">
         <img src='./assets/img/icons/Security.svg' alt="logo">
     </div>
-    <h4 class="section__heading section__heading_@@HeadingColor">Захист бізнесу, інтелектуальної власності</h4>
+    <h4 class="section__heading section__heading_@@HeadingColor">
+        <a href=./pages/service-page/service-page.html>Захист бізнесу, інтелектуальної власності</a>
+    </h4>
 </div>
 <p class="section__text">А весь інший час він працюватиме над новими різноплановими проектами, тому вже точно не зупиниться в професійному розвитку. Так чи інакше, на вас працюватиме весь Axon Partners замість корпоративного юриста.</p>
 
@@ -305,7 +329,9 @@
     <div class="section__logo section__logo_@@size">
         <img src='./assets/img/icons/Law.svg' alt="logo">
     </div>
-    <h4 class="section__heading section__heading_@@HeadingColor">Судове представництво</h4>
+    <h4 class="section__heading section__heading_@@HeadingColor">
+        <a href=./pages/service-page/service-page.html>Судове представництво</a>
+    </h4>
 </div>
 <p class="section__text">Невелика компанія, середнього розміру, чи вже лідер ринку? Локальний бізнес або транснаціональна компанія? Маєте власний юридичний відділ, чи ні?</p>
 
@@ -318,47 +344,61 @@
     <div class="team-card__container">
         <div class="team-card__img team-card__img_mobile"></div>
         <div class="team-card__description">
-            <span class="team-card__path">команда</span>
+            <a href="./pages/team/team.html">
+                <span class="team-card__path">команда</span>
+            </a>
             <h2 class="team-card__heading">Слайд 1. Ми звикли брати на себе відповідальність та завжди гарантуємо чесну,
                 вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
             <div class="team-card__member">
                 <div class="team-card__name-wrapper_mobile">
-                    <h5 class="team-card__name">Олександр Олександровський</h5>
+                    <h5 class="team-card__name">
+                        <a href="./pages/team-member-page/team-member-page.html">Олександр Олександровський</a>
+                    </h5>
                     <h5 class="team-card__position">Керуючий партнер</h5>
                 </div>
             </div>
         </div>
     </div>
-    <div class="team-card__container">
+    <div class="team-card__container team-card__container_second">
         <div class="team-card__img team-card__img_second team-card__img_mobile"></div>
         <div class="team-card__description">
-            <span class="team-card__path">команда</span>
+            <a href="./pages/team/team.html">
+                <span class="team-card__path">команда</span>
+            </a>
             <h2 class="team-card__heading">Слайд 2. Ми звикли брати на себе відповідальність та завжди гарантуємо чесну,
                 вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
             <div class="team-card__member">
                 <div class="team-card__name-wrapper_mobile">
-                    <h5 class="team-card__name">Олександр Олександровський</h5>
-                    <h5 class="team-card__position">Керуючий партнер</h5>
+                    <h5 class="team-card__name">
+                        <a href="./pages/team-member-page/team-member-page.html">Оксана Кобзар</a>
+                    </h5>
+                    <h5 class="team-card__position">Equity partner, Attorney-at-law</h5>
                 </div>
             </div>
         </div>
     </div>
-    <div class="team-card__container">
+    <div class="team-card__container team-card__container_third">
         <div class="team-card__img team-card__img_third team-card__img_mobile"></div>
         <div class="team-card__description">
-            <span class="team-card__path">команда</span>
+            <a href="./pages/team/team.html">
+                <span class="team-card__path">команда</span>
+            </a>
             <h2 class="team-card__heading">Слайд 3. Ми звикли брати на себе відповідальність та завжди гарантуємо чесну,
                 вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
             <div class="team-card__member">
                 <div class="team-card__name-wrapper_mobile">
-                    <h5 class="team-card__name">Олександр Олександровський</h5>
-                    <h5 class="team-card__position">Керуючий партнер</h5>
+                    <h5 class="team-card__name">
+                        <a href="./pages/team-member-page/team-member-page.html">Владислав Мельник</a>
+                    </h5>
+                    <h5 class="team-card__position">Associate</h5>
                 </div>
             </div>
         </div>
     </div>
     <div class="team-card__pagination">
-        <span class="team-card__dot" onclick="currentSlideTeam(1)"></span><span class="team-card__dot" onclick="currentSlideTeam(2)"></span><span class="team-card__dot" onclick="currentSlideTeam(3)"></span>
+        <span class="team-card__dot" onclick="currentSlideTeam(1)"></span><span class="team-card__dot"
+                                                                                onclick="currentSlideTeam(2)"></span><span
+            class="team-card__dot" onclick="currentSlideTeam(3)"></span>
     </div>
 </div>
 
@@ -366,10 +406,6 @@
 <script>
     var slideIndexTeam = 1;
     showSlidesTeam(slideIndexTeam);
-
-    function plusSlidesTeam(n) {
-        showSlidesTeam(slideIndexTeam += n);
-    }
 
     function currentSlideTeam(n) {
         showSlidesTeam(slideIndexTeam = n);
@@ -379,16 +415,20 @@
         var j;
         var slidesTeam = document.getElementsByClassName("team-card__container");
         var dotsTeam = document.getElementsByClassName("team-card__dot");
-        if (n > slidesTeam.length) {slideIndexTeam = 1}
-        if (n < 1) {slideIndexTeam = slidesTeam.length}
+        if (n > slidesTeam.length) {
+            slideIndexTeam = 1
+        }
+        if (n < 1) {
+            slideIndexTeam = slidesTeam.length
+        }
         for (j = 0; j < slidesTeam.length; j++) {
             slidesTeam[j].style.display = "none";
         }
         for (j = 0; j < dotsTeam.length; j++) {
             dotsTeam[j].className = dotsTeam[j].className.replace(" team-card__dot_active", "");
         }
-        slidesTeam[slideIndexTeam-1].style.display = "flex";
-        dotsTeam[slideIndexTeam-1].className += " team-card__dot_active";
+        slidesTeam[slideIndexTeam - 1].style.display = "flex";
+        dotsTeam[slideIndexTeam - 1].className += " team-card__dot_active";
     }
 </script>
 

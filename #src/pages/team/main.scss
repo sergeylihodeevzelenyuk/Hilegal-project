@@ -5,6 +5,9 @@
 @import "../common-components/footer/_main.scss";
 @import "./local-components/team-card.scss";
 
+.body__overflow-hidden {
+  overflow: hidden;
+}
 
 .page__wrapper {
   min-width: 320px;

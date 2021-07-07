@@ -6,6 +6,10 @@
 @import "../common-components/button/_main.scss";
 @import "../common-components/footer/_main.scss";
 
+.body__overflow-hidden {
+  overflow: hidden;
+}
+
 .page__wrapper {
   min-width: 320px;
   max-width: 1600px;

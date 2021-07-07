@@ -2,47 +2,61 @@
     <div class="team-card__container">
         <div class="team-card__img team-card__img_mobile"></div>
         <div class="team-card__description">
-            <span class="team-card__path">команда</span>
+            <a href="./pages/team/team.html">
+                <span class="team-card__path">команда</span>
+            </a>
             <h2 class="team-card__heading">Слайд 1. Ми звикли брати на себе відповідальність та завжди гарантуємо чесну,
                 вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
             <div class="team-card__member">
                 <div class="team-card__name-wrapper_mobile">
-                    <h5 class="team-card__name">Олександр Олександровський</h5>
+                    <h5 class="team-card__name">
+                        <a href="./pages/team-member-page/team-member-page.html">Олександр Олександровський</a>
+                    </h5>
                     <h5 class="team-card__position">Керуючий партнер</h5>
                 </div>
             </div>
         </div>
     </div>
-    <div class="team-card__container">
+    <div class="team-card__container team-card__container_second">
         <div class="team-card__img team-card__img_second team-card__img_mobile"></div>
         <div class="team-card__description">
-            <span class="team-card__path">команда</span>
+            <a href="./pages/team/team.html">
+                <span class="team-card__path">команда</span>
+            </a>
             <h2 class="team-card__heading">Слайд 2. Ми звикли брати на себе відповідальність та завжди гарантуємо чесну,
                 вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
             <div class="team-card__member">
                 <div class="team-card__name-wrapper_mobile">
-                    <h5 class="team-card__name">Олександр Олександровський</h5>
-                    <h5 class="team-card__position">Керуючий партнер</h5>
+                    <h5 class="team-card__name">
+                        <a href="./pages/team-member-page/team-member-page.html">Оксана Кобзар</a>
+                    </h5>
+                    <h5 class="team-card__position">Equity partner, Attorney-at-law</h5>
                 </div>
             </div>
         </div>
     </div>
-    <div class="team-card__container">
+    <div class="team-card__container team-card__container_third">
         <div class="team-card__img team-card__img_third team-card__img_mobile"></div>
         <div class="team-card__description">
-            <span class="team-card__path">команда</span>
+            <a href="./pages/team/team.html">
+                <span class="team-card__path">команда</span>
+            </a>
             <h2 class="team-card__heading">Слайд 3. Ми звикли брати на себе відповідальність та завжди гарантуємо чесну,
                 вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</h2>
             <div class="team-card__member">
                 <div class="team-card__name-wrapper_mobile">
-                    <h5 class="team-card__name">Олександр Олександровський</h5>
-                    <h5 class="team-card__position">Керуючий партнер</h5>
+                    <h5 class="team-card__name">
+                        <a href="./pages/team-member-page/team-member-page.html">Владислав Мельник</a>
+                    </h5>
+                    <h5 class="team-card__position">Associate</h5>
                 </div>
             </div>
         </div>
     </div>
     <div class="team-card__pagination">
-        <span class="team-card__dot" onclick="currentSlideTeam(1)"></span><span class="team-card__dot" onclick="currentSlideTeam(2)"></span><span class="team-card__dot" onclick="currentSlideTeam(3)"></span>
+        <span class="team-card__dot" onclick="currentSlideTeam(1)"></span><span class="team-card__dot"
+                                                                                onclick="currentSlideTeam(2)"></span><span
+            class="team-card__dot" onclick="currentSlideTeam(3)"></span>
     </div>
 </div>
 
@@ -50,10 +64,6 @@
 <script>
     var slideIndexTeam = 1;
     showSlidesTeam(slideIndexTeam);
-
-    function plusSlidesTeam(n) {
-        showSlidesTeam(slideIndexTeam += n);
-    }
 
     function currentSlideTeam(n) {
         showSlidesTeam(slideIndexTeam = n);
@@ -63,15 +73,19 @@
         var j;
         var slidesTeam = document.getElementsByClassName("team-card__container");
         var dotsTeam = document.getElementsByClassName("team-card__dot");
-        if (n > slidesTeam.length) {slideIndexTeam = 1}
-        if (n < 1) {slideIndexTeam = slidesTeam.length}
+        if (n > slidesTeam.length) {
+            slideIndexTeam = 1
+        }
+        if (n < 1) {
+            slideIndexTeam = slidesTeam.length
+        }
         for (j = 0; j < slidesTeam.length; j++) {
             slidesTeam[j].style.display = "none";
         }
         for (j = 0; j < dotsTeam.length; j++) {
             dotsTeam[j].className = dotsTeam[j].className.replace(" team-card__dot_active", "");
         }
-        slidesTeam[slideIndexTeam-1].style.display = "flex";
-        dotsTeam[slideIndexTeam-1].className += " team-card__dot_active";
+        slidesTeam[slideIndexTeam - 1].style.display = "flex";
+        dotsTeam[slideIndexTeam - 1].className += " team-card__dot_active";
     }
 </script>

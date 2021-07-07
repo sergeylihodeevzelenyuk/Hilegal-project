@@ -257,6 +257,10 @@ select {
     display: flex;
     justify-content: center;
   }
+  .header .close__wrapper {
+    position: absolute;
+    right: 10px;
+  }
   .header__mobile-menu {
     display: none;
     position: absolute;
@@ -275,16 +279,19 @@ select {
   .header__mobile-menu_nav a {
     padding: 11px 0 15px 0;
     margin: 0;
-    border-bottom: solid 2px #ffffff;
+    border-bottom: solid 2px #ffffff !important;
   }
   .header__mobile-menu_nav a:active {
-    border-bottom: solid 2px #ffffff;
+    border-bottom: solid 2px #ffffff !important;
   }
   .header__mobile-menu .nav__active {
-    border-bottom: solid 2px #ffffff;
+    border-bottom: solid 2px #ffffff !important;
   }
   .header__mobile-menu_active {
     display: block;
+  }
+  .header__mobile-menu_hidden {
+    display: none;
   }
 }
 
@@ -1348,15 +1355,25 @@ select {
   flex-shrink: 0;
   width: 413px;
   height: 500px;
+  border-radius: 12px 0 0 12px;
+  overflow: hidden;
   background: url("img/Team-member.png") center/cover no-repeat;
+  background-size: 100% 100%;
+  transition: background-size 0.7s ease;
+}
+
+.team-card__img:hover {
+  background-size: 110% 110%;
 }
 
 .team-card__img_second {
   background: url("img/Team-member-2.png") center/cover no-repeat;
+  background-size: 100% 100%;
 }
 
 .team-card__img_third {
   background: url("img/Team-member-3.png") center/cover no-repeat;
+  background-size: 100% 100%;
 }
 
 .team-card__description {
@@ -1483,9 +1500,19 @@ select {
     border-radius: 50%;
     background: url("img/Team-member-mobile.png") center/contain no-repeat;
   }
+  .team-card__container_second .team-card__member::before {
+    background: url("img/Team-member-1-mobile.png") center/contain no-repeat;
+  }
+  .team-card__container_third .team-card__member::before {
+    background: url("img/Team-member-2-mobile.png") center/contain no-repeat;
+  }
   .team-card__name-wrapper_mobile {
     padding: 5px 0 0;
   }
+}
+
+.body__overflow-hidden {
+  overflow: hidden;
 }
 
 .page__wrapper {
@@ -1536,9 +1563,11 @@ select {
 .hallo__button-scroll-down {
   width: 42px;
   height: 42px;
-  position: sticky;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   bottom: 20px;
-  left: calc(50% - 21px);
   transition: 0.5s;
   z-index: 1;
 }

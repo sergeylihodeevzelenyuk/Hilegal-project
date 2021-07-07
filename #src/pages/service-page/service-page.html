@@ -9,13 +9,14 @@
     <link rel="alternate" hreflang="en" href="http://en.example.com/"/>
     <title>Hlegal. Послуги</title>
 </head>
-<body>
+<body id="body">
 <div class="page__wrapper">
     <div class="hallo__section">
         <div class="header__wrapper">
             @@include('../common-components/header/header.html', {
             "path":"'../../assets/img/icons/LogoServices.svg'",
             "burger-logo-path":"'../../assets/img/icons/Logo_sub_small.svg'",
+            "prefix":"..",
             "logoPrefix":"../..",
             "menuPrefix":"..",
             "services-active":"active"
@@ -25,6 +26,7 @@
             @@include('../common-components/service-section/section.html', {
             "path":"'../../assets/img/icons/Basket.svg'",
             "size":"big",
+            "href":"#",
             "heading":'IT та електронна комерція',
             "HeadingColor":"red",
             "text":"Нескінчений потік договорів, податкові питання, трудові відносини, корпоративні папери — юридична робота відволікає вас від ведення бізнесу. Але роботи не так вже й багато, щоб наймати інхауз-юриста.<br><br>До того ж, з часом робота стане однотипною і нецікавою для штатного юриста. А ще ми добре знаємо, як важко в Україні знайти хорошого кандидата з досвідом у сфері інформаційних технологій."
