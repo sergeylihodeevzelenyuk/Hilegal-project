@@ -26,7 +26,8 @@ let { src, dest } = require('gulp'),
     fileinclude = require('gulp-file-include'),
     del = require('del'),
     scss = require('gulp-sass'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    autoprefixer = require('gulp-autoprefixer');
 
 
 function browserSync(params) {
@@ -53,6 +54,12 @@ function css() {
                      outputStyle: "expanded"
             })
         )
+        .pipe(
+            autoprefixer({
+                owerrideBrowserslist: ["last 5 versions"],
+                cascad: true
+            })
+        )
         .pipe(dest(path.build.css))
         .pipe(browsersync.stream())
 }
@@ -70,7 +77,6 @@ function images() {
         .pipe(dest(path.build.img))
         .pipe(browsersync.stream())
 }
-
 
 function watchFiles(params) {
     gulp.watch([path.watch.html], html);

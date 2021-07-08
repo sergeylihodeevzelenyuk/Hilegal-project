@@ -7,6 +7,7 @@
 .body__overflow-hidden {
   overflow: hidden;
   position: relative;
+  height: 100vh;
 }
 
 .page__wrapper {
@@ -24,7 +25,7 @@
   width: 76%;
   margin: 0 auto 80px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
 
   &__img {
     margin: 0 40px 0 0;

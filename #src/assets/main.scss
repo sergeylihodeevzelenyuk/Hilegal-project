@@ -13,6 +13,7 @@
 
 .body__overflow-hidden {
   overflow: hidden;
+  height: 100vh;
   position: relative;
 }
 
@@ -93,6 +94,10 @@
 
     &__heading {
       bottom: 550px;
+    }
+
+    &__button-scroll-down {
+      bottom: 45px;
     }
   }
 }

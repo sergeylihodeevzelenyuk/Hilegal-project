@@ -54,6 +54,9 @@
   &__name {
     @include font-style(18px, 21px, $TextGrey, 600);
     margin: 0 0 5px 0;
+    &:hover {
+      color: $AccentRed;
+    }
   }
 
   &__position {

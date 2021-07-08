@@ -42,7 +42,8 @@ ol[class] {
 }
 
 a {
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   text-decoration: none;
 }
 
@@ -540,6 +541,22 @@ select {
   font-weight: 500;
 }
 
+.input::-moz-placeholder {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+  font-weight: 400;
+}
+
+.input:-ms-input-placeholder {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+  font-weight: 400;
+}
+
 .input::placeholder {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -624,6 +641,22 @@ select {
   font-weight: 500;
 }
 
+.feedback__message::-moz-placeholder {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+  font-weight: 400;
+}
+
+.feedback__message:-ms-input-placeholder {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B3B3BA;
+  font-weight: 400;
+}
+
 .feedback__message::placeholder {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -649,6 +682,7 @@ select {
 .body__overflow-hidden {
   overflow: hidden;
   position: relative;
+  height: 100vh;
 }
 
 .page__wrapper {

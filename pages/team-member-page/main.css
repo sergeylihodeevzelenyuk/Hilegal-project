@@ -42,7 +42,8 @@ ol[class] {
 }
 
 a {
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   text-decoration: none;
 }
 
@@ -528,6 +529,7 @@ select {
 .body__overflow-hidden {
   overflow: hidden;
   position: relative;
+  height: 100vh;
 }
 
 .page__wrapper {
@@ -545,7 +547,7 @@ select {
   width: 76%;
   margin: 0 auto 80px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .team-member__img {

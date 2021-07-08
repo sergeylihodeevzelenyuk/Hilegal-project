@@ -5,8 +5,7 @@
 @import "../common-components/footer/_main.scss";
 
 .body__overflow-hidden {
-  overflow: hidden;
-  position: relative;
+  height: 100vh;
 }
 
 .page__wrapper {
@@ -233,7 +232,8 @@
 @media (max-width: 600px) {
 
   .page__wrapper {
-    overflow-y: hidden;
+    overflow: hidden;
+    position: relative;
   }
 
   .team-specs {

@@ -42,7 +42,8 @@ ol[class] {
 }
 
 a {
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   text-decoration: none;
 }
 
@@ -379,6 +380,10 @@ select {
   margin: 0 0 15px 0;
 }
 
+.section__heading:hover {
+  color: #F0145A;
+}
+
 .section__heading_red {
   font-family: 'Open Sans', sans-serif;
   font-size: 42px;
@@ -555,7 +560,8 @@ select {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr 3.5fr 3.5fr;
-  column-gap: 2px;
+  -moz-column-gap: 2px;
+       column-gap: 2px;
   row-gap: 2px;
   padding: 0 60px;
   margin: 0 0 30px;
@@ -613,7 +619,8 @@ select {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 3.5fr 3.5fr 3.5fr;
-    column-gap: 2px;
+    -moz-column-gap: 2px;
+         column-gap: 2px;
     row-gap: 2px;
     padding: 0 40px;
   }
@@ -948,6 +955,7 @@ select {
 .body__overflow-hidden {
   overflow: hidden;
   position: relative;
+  height: 100vh;
 }
 
 .page__wrapper {

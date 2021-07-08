@@ -9,6 +9,9 @@
   &__heading {
     @include font-style(24px, 28px, $ActiveBlue, 500);
     margin: 0 0 15px 0;
+    &:hover {
+      color: $AccentRed;
+    }
   }
 
   &__heading_red {

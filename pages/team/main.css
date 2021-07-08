@@ -42,7 +42,8 @@ ol[class] {
 }
 
 a {
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   text-decoration: none;
 }
 
@@ -636,6 +637,7 @@ select {
 .body__overflow-hidden {
   overflow: hidden;
   position: relative;
+  height: 100vh;
 }
 
 .page__wrapper {

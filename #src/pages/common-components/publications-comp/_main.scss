@@ -13,7 +13,10 @@
   }
 
   &__path {
-    @include Path;
+    @include Path(
+            $color: $ActiveBlue,
+            $opacity: 1,
+            $linkArrow: "../../assets/img/icons/Link-arrow-blue.svg");
   }
 
   &__heading {
@@ -51,7 +54,8 @@
 
 @media (max-width: 1009px) {
   .publications {
-      padding: 40px 40px 0;
+    padding: 40px 40px 0;
+
     &__container {
       column-count: 2;
       column-gap: 40px;

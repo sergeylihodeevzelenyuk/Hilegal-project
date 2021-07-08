@@ -13,6 +13,20 @@
 
   &__img_wrapper {
     width: 100%;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+  }
+
+  &__publications-entry {
+    border-radius: 12px;
+  }
+
+  &__img {
+    transition: 0.8s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .hidden {
@@ -26,6 +40,10 @@
   &__heading {
     @include font-style(18px, 21px, $ActiveBlue, 500);
     margin: 0 0 10px;
+
+    &:hover {
+      color: $AccentRed;
+    }
 
     &_big {
       @include font-style(32px, 38px, $TextBlue, 500);
