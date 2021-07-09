@@ -299,7 +299,7 @@ select {
     left: 0;
     right: 0;
     background-color: #ffffff;
-    z-index: 1;
+    z-index: 2;
   }
   .header__mobile-menu_nav {
     -webkit-box-orient: vertical;
@@ -683,6 +683,7 @@ select {
 
 .feedback {
   background-color: #F5F5FA;
+  opacity: 1;
   border-radius: 12px;
   padding: 20px;
 }
@@ -777,6 +778,9 @@ select {
 }
 
 @media (max-width: 649px) {
+  .feedback {
+    border-radius: unset;
+  }
   .feedback__heading {
     font-family: 'Open Sans', sans-serif;
     font-size: 22px;
@@ -904,8 +908,5 @@ select {
   }
   .contact__form {
     width: 100%;
-  }
-  .feedback {
-    border-radius: unset;
   }
 }

@@ -8,6 +8,10 @@
   background-color: $BgGrey;
   padding: 40px 60px 0;
 
+  &_more-articles {
+    height: unset;
+  }
+
   &__border-active {
     border-radius: 12px 12px 0 0;
   }
@@ -50,6 +54,10 @@
     height: 200px;
     width: 100%;
     background: url("../../assets/img/Shade-white.png") center/cover no-repeat;
+
+    &_hidden {
+      display: none;
+    }
   }
 
   &__art-shadow_homepage {
@@ -63,6 +71,10 @@
     z-index: 3;
     left: calc(50% - 125px);
     bottom: 40px;
+
+    &_hidden {
+      display: none;
+    }
   }
 }
 
@@ -88,10 +100,17 @@
     }
 
     &__container {
+      margin-bottom: 20px;
       column-count: 1;
 
-      & :nth-child(4), & :nth-child(5), & :nth-child(6) {
+      & :nth-child(n + 4) {
         display: none;
+      }
+
+      &_more-articles {
+        .article__wrapper {
+          display: block;
+        }
       }
     }
 
@@ -101,9 +120,7 @@
 
     &__button-wrapper {
       position: unset;
-      margin: 0 auto 20px;
-      box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
-      border-radius: 12px;
+      margin: 0 auto 40px;
     }
   }
 }

@@ -21,7 +21,7 @@
     "publication-active":"active"
     })
   </div>
-  <main class="main">
+  <main id="main" class="main">
     <div class="main__switch-wrapper">
       <div class="switch">
         <div class="switch__item switch__item_right">новини</div>
@@ -150,12 +150,20 @@
         })
       </div>
     </div>
-    <div class="main__button-wrapper">
+    <div id="art" class="main__art-shadow main__art-shadow_mobile"></div>
+    <div id="button" onclick="moreArticles()" class="main__button-wrapper">
       @@include('../common-components/button/button.html', {
       "type":"button",
       "text":"Ще публікації"
       })
     </div>
+    <script>
+      function moreArticles() {
+        document.getElementById("main").classList.toggle("main_more-articles");
+        document.getElementById("button").classList.toggle("main__button-wrapper_hidden");
+        document.getElementById("art").classList.toggle("main__art-shadow_hidden");
+      }
+    </script>
   </main>
   @@include('../common-components/footer/footer.html', {
   "prefix":"..",

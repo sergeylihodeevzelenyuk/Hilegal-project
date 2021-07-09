@@ -27,6 +27,13 @@
   background-color: $BgGrey;
   border-radius: 12px 12px 0 0;
   padding: 0 0 60px;
+  height: 992px;
+  overflow-y: hidden;
+
+  &_more-articles {
+    padding: 0;
+    height: unset;
+  }
 
   &__switch-wrapper {
     padding: 40px 0;
@@ -39,8 +46,29 @@
     text-align: center;
   }
 
+  &__art-shadow {
+    position: sticky;
+    z-index: 2;
+    bottom: -61px;
+    height: 200px;
+    width: 100%;
+    background: url("../../assets/img/Shade-white.png") center/cover no-repeat;
+
+    &_hidden {
+      display: none;
+    }
+  }
+
   &__button-wrapper {
-    text-align: center;
+    width: 250px;
+    position: sticky;
+    z-index: 3;
+    left: calc(50% - 125px);
+    bottom: -20px;
+
+    &_hidden {
+      display: none;
+    }
   }
 }
 
@@ -79,6 +107,7 @@
 
   .main__publications {
     padding: 0 40px 0;
+    margin: 0 0 20px;
     column-count: 2;
   }
 }
@@ -89,7 +118,8 @@
   }
 
   .main {
-    padding: 0 0 20px;
+    height: unset;
+    padding: 0 0 40px;
 
     &__switch-wrapper {
       padding: 20px 0;
@@ -97,11 +127,34 @@
 
     &__publications {
       padding: 0 20px 0;
-      column-count: unset;
-      text-align: center;
+      column-count: 1;
+
+      & :nth-child(n + 6) {
+        display: none;
+      }
+    }
+
+    &_more-articles {
+      padding: 0;
+
+      .publications {
+        &__item {
+          display: block;
+        }
+      }
+    }
+
+    &__art-shadow {
+      display: none;
+    }
+
+    &__button-wrapper {
+      position: unset;
+      margin: 0 auto;
     }
   }
-  .publications__item {
+
+  &__item {
     margin: 0 0 20px;
   }
 }

@@ -32,12 +32,23 @@
             "text":"Нескінчений потік договорів, податкові питання, трудові відносини, корпоративні папери — юридична робота відволікає вас від ведення бізнесу. Але роботи не так вже й багато, щоб наймати інхауз-юриста.<br><br>До того ж, з часом робота стане однотипною і нецікавою для штатного юриста. А ще ми добре знаємо, як важко в Україні знайти хорошого кандидата з досвідом у сфері інформаційних технологій."
             })
         </div>
-        <div class="publication__button-wrapper">
+        <div onclick="request()" class="publication__button-wrapper">
             @@include('../common-components/button/button.html', {
             "type":"button",
             "text":"Безкоштовна консультація"
             })
         </div>
+        <div id="feedback" class="publication__request">
+            <div class="publication__feedback-wrapper">
+                @@include('../common-components/feedback-form/feedback-form.html')
+            </div>
+        </div>
+        <script>
+            function request() {
+                document.getElementById("feedback").classList.toggle("publication__request_active");
+                document.getElementById("body").classList.toggle("body__overflow-hidden");
+            }
+        </script>
         <div class="publication__details">
             <h4>Послуги цього напрямку:</h4>
             <ul>

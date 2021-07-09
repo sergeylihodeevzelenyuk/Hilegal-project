@@ -299,7 +299,7 @@ select {
     left: 0;
     right: 0;
     background-color: #ffffff;
-    z-index: 1;
+    z-index: 2;
   }
   .header__mobile-menu_nav {
     -webkit-box-orient: vertical;
@@ -531,9 +531,6 @@ select {
   }
   .article__publications-entry {
     border-radius: 12px 12px 0 0;
-  }
-  .article__wrapper {
-    margin: 0 0 20px 0;
   }
   .article__content {
     padding: 17px 20px 17px;
@@ -786,6 +783,13 @@ select {
   background-color: #F5F5FA;
   border-radius: 12px 12px 0 0;
   padding: 0 0 60px;
+  height: 992px;
+  overflow-y: hidden;
+}
+
+.main_more-articles {
+  padding: 0;
+  height: unset;
 }
 
 .main__switch-wrapper {
@@ -803,8 +807,31 @@ select {
   text-align: center;
 }
 
+.main__art-shadow {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 2;
+  bottom: -61px;
+  height: 200px;
+  width: 100%;
+  background: url("../../assets/img/Shade-white.png") center/cover no-repeat;
+}
+
+.main__art-shadow_hidden {
+  display: none;
+}
+
 .main__button-wrapper {
-  text-align: center;
+  width: 250px;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 3;
+  left: calc(50% - 125px);
+  bottom: -20px;
+}
+
+.main__button-wrapper_hidden {
+  display: none;
 }
 
 .switch {
@@ -847,6 +874,7 @@ select {
 @media (max-width: 1009px) {
   .main__publications {
     padding: 0 40px 0;
+    margin: 0 0 20px;
     -webkit-column-count: 2;
        -moz-column-count: 2;
             column-count: 2;
@@ -858,19 +886,35 @@ select {
     margin: 0 0 20px;
   }
   .main {
-    padding: 0 0 20px;
+    height: unset;
+    padding: 0 0 40px;
   }
   .main__switch-wrapper {
     padding: 20px 0;
   }
   .main__publications {
     padding: 0 20px 0;
-    -webkit-column-count: unset;
-       -moz-column-count: unset;
-            column-count: unset;
-    text-align: center;
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
   }
-  .publications__item {
+  .main__publications :nth-child(n + 6) {
+    display: none;
+  }
+  .main_more-articles {
+    padding: 0;
+  }
+  .main_more-articles .publications__item {
+    display: block;
+  }
+  .main__art-shadow {
+    display: none;
+  }
+  .main__button-wrapper {
+    position: unset;
+    margin: 0 auto;
+  }
+  __item {
     margin: 0 0 20px;
   }
 }

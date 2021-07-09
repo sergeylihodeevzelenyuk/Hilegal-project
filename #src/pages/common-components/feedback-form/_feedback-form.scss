@@ -3,6 +3,7 @@
 
 .feedback {
   background-color: $BgGrey;
+  opacity: 1;
   border-radius: 12px;
   padding: 20px;
 
@@ -37,7 +38,6 @@
     &::placeholder {
       @include font-style(16px, 26px, $TextGrey, 400);
     }
-
   }
 
   &__button-wrapper {
@@ -47,7 +47,11 @@
 
 
 @media (max-width: 649px) {
-  .feedback__heading {
-    @include font-style(22px, 26px, $AccentRed, 600);
+  .feedback {
+    border-radius: unset;
+
+    &__heading {
+      @include font-style(22px, 26px, $AccentRed, 600);
+    }
   }
 }

@@ -40,18 +40,6 @@
   margin: 0 0 20px;
 }
 
-@media (min-width: 1600px) {
-  .main {
-    min-height: calc(100vh - 333px);
-  }
-}
-
-@media (min-height: 1000px) and (max-width: 1100px) {
-  .main {
-    min-height: calc(100vh - 311px);
-  }
-}
-
 @media (max-width: 1025px) {
   .header__wrapper {
     margin: 0 0 20px;

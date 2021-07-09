@@ -299,7 +299,7 @@ select {
     left: 0;
     right: 0;
     background-color: #ffffff;
-    z-index: 1;
+    z-index: 2;
   }
   .header__mobile-menu_nav {
     -webkit-box-orient: vertical;
@@ -1035,9 +1035,6 @@ select {
   .article__publications-entry {
     border-radius: 12px 12px 0 0;
   }
-  .article__wrapper {
-    margin: 0 0 20px 0;
-  }
   .article__content {
     padding: 17px 20px 17px;
   }
@@ -1089,6 +1086,10 @@ select {
   overflow-y: hidden;
   background-color: #F5F5FA;
   padding: 40px 60px 0;
+}
+
+.publications_more-articles {
+  height: unset;
 }
 
 .publications__border-active {
@@ -1175,6 +1176,10 @@ select {
   background: url("../../assets/img/Shade-white.png") center/cover no-repeat;
 }
 
+.publications__art-shadow_hidden {
+  display: none;
+}
+
 .publications__art-shadow_homepage {
   background: url("./img/Shade-white.png") center/cover no-repeat;
 }
@@ -1186,6 +1191,10 @@ select {
   z-index: 3;
   left: calc(50% - 125px);
   bottom: 40px;
+}
+
+.publications__button-wrapper_hidden {
+  display: none;
 }
 
 @media (max-width: 1009px) {
@@ -1216,22 +1225,23 @@ select {
     margin: 0 0 17px 0;
   }
   .publications__container {
+    margin-bottom: 20px;
     -webkit-column-count: 1;
        -moz-column-count: 1;
             column-count: 1;
   }
-  .publications__container :nth-child(4), .publications__container :nth-child(5), .publications__container :nth-child(6) {
+  .publications__container :nth-child(n + 4) {
     display: none;
+  }
+  .publications__container_more-articles .article__wrapper {
+    display: block;
   }
   .publications__art-shadow_mobile {
     display: none;
   }
   .publications__button-wrapper {
     position: unset;
-    margin: 0 auto 20px;
-    -webkit-box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
-            box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
-    border-radius: 12px;
+    margin: 0 auto 40px;
   }
 }
 

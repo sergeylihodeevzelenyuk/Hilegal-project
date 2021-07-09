@@ -6,6 +6,7 @@
 @import "../common-components/cases/_main.scss";
 @import "../common-components/publications-comp/_main.scss";
 @import "../common-components/footer/_main.scss";
+@import "../common-components/feedback-form/_feedback-form.scss";
 
 .body__overflow-hidden {
   overflow: hidden;
@@ -41,6 +42,27 @@
   &__button-wrapper {
     width: 250px;
     margin: 0 auto 80px;
+  }
+
+  &__request {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $TextBlueOpasity;
+    z-index: 2;
+
+    &_active {
+      display: flex;
+    }
+  }
+
+  &__feedback-wrapper {
+    max-width: 527px;
   }
 
   &__details {
@@ -93,6 +115,12 @@
 
     &__button-wrapper {
       margin: 0 auto 40px;
+    }
+
+    &__feedback-wrapper {
+      width: 100%;
+
+
     }
 
     &__details {
