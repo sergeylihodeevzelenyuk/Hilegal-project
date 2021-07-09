@@ -418,6 +418,7 @@ select {
   border-radius: 24px;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .section__logo img {
@@ -830,6 +831,7 @@ select {
   border-radius: 8px 8px 0 0;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .article__publications-entry {
@@ -1065,6 +1067,7 @@ select {
 .publications__art-shadow {
   position: -webkit-sticky;
   position: sticky;
+  z-index: 2;
   bottom: -1px;
   height: 200px;
   width: 100%;
@@ -1079,6 +1082,7 @@ select {
   width: 250px;
   position: -webkit-sticky;
   position: sticky;
+  z-index: 3;
   left: calc(50% - 125px);
   bottom: 40px;
 }

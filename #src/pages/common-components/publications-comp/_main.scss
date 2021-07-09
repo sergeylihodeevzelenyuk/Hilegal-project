@@ -45,6 +45,7 @@
 
   &__art-shadow {
     position: sticky;
+    z-index: 2;
     bottom: -1px;
     height: 200px;
     width: 100%;
@@ -59,6 +60,7 @@
   &__button-wrapper {
     width: 250px;
     position: sticky;
+    z-index: 3;
     left: calc(50% - 125px);
     bottom: 40px;
   }

@@ -429,6 +429,7 @@ select {
   border-radius: 8px 8px 0 0;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .article__publications-entry {

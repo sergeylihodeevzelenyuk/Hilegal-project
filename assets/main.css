@@ -418,6 +418,7 @@ select {
   border-radius: 24px;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .section__logo img {
@@ -931,6 +932,7 @@ select {
   border-radius: 8px 8px 0 0;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .article__publications-entry {
@@ -1166,6 +1168,7 @@ select {
 .publications__art-shadow {
   position: -webkit-sticky;
   position: sticky;
+  z-index: 2;
   bottom: -1px;
   height: 200px;
   width: 100%;
@@ -1180,6 +1183,7 @@ select {
   width: 250px;
   position: -webkit-sticky;
   position: sticky;
+  z-index: 3;
   left: calc(50% - 125px);
   bottom: 40px;
 }
@@ -1606,6 +1610,7 @@ select {
   border-radius: 12px 0 0 12px;
   overflow: hidden;
   position: relative;
+  z-index: 1;
   background: url("img/Team-member.png") center/cover no-repeat;
   background-size: 100% 100%;
   -webkit-transition: background-size 0.7s ease;
@@ -1838,9 +1843,9 @@ select {
   right: 0;
   margin: 0 auto;
   bottom: 20px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
   z-index: 1;
 }
 
@@ -1865,7 +1870,7 @@ select {
     bottom: 550px;
   }
   .hallo__button-scroll-down {
-    bottom: 45px;
+    bottom: 105px;
   }
 }
 

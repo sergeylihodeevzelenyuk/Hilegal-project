@@ -19,6 +19,7 @@
     border-radius: 12px 0 0 12px;
     overflow: hidden;
     position: relative;
+    z-index: 1;
     background: url("img/Team-member.png") center / cover no-repeat;
     background-size: 100% 100%;
     transition: background-size 0.7s ease;
