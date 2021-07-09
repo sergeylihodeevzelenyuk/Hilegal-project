@@ -51,10 +51,10 @@ $main-radius: 8px;
   $opacity: 1,
   $linkArrow: "./img/icons/Link-arrow-blue.svg",) {
   display: inline-block;
-  margin: 0 0 3px 0;
   @include font-style(14px, 17px, $color, 500);
   text-transform: uppercase;
   opacity: $opacity;
+  border-bottom: 3px solid transparent;
 
   &::after {
     display: inline-block;

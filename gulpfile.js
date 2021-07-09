@@ -56,8 +56,8 @@ function css() {
         )
         .pipe(
             autoprefixer({
-                owerrideBrowserslist: ["last 5 versions"],
-                cascad: true
+                overrideBrowserslist: ["last 5 versions"],
+                cascade: true
             })
         )
         .pipe(dest(path.build.css))

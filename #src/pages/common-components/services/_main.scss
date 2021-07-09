@@ -5,7 +5,11 @@
 
   &__path {
     @include Path($white, 50%, "./img/icons/Link-arrow-white.svg");
-    margin: 0 0 3px 20px;
+    margin: 0 0 0 20px;
+
+    &:hover {
+      border-bottom: 3px solid $AccentRed;
+    }
   }
 
   &__path-hidden {

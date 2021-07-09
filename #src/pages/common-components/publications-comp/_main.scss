@@ -13,10 +13,22 @@
   }
 
   &__path {
+
     @include Path(
             $color: $ActiveBlue,
             $opacity: 1,
             $linkArrow: "../../assets/img/icons/Link-arrow-blue.svg");
+
+    &_homepage {
+      @include Path(
+              $color: $ActiveBlue,
+              $opacity: 1,
+              $linkArrow: "./img/icons/Link-arrow-blue.svg");
+    }
+
+    &:hover {
+      border-bottom: 3px solid $AccentRed;
+    }
   }
 
   &__heading {
