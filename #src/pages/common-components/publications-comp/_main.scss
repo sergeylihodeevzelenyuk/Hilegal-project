@@ -17,30 +17,7 @@
   }
 
   &__path {
-
-    @include Path(
-            $color: $ActiveBlue,
-            $opacity: 1,
-            $linkArrow: "../../assets/img/icons/Link-arrow-blue.svg");
-    &:hover {
-      @include Path(
-              $color: $AccentRed,
-              $opacity: 1,
-              $linkArrow: "../../assets/img/icons/Link-arrow-red.svg");
-    }
-
-    &_homepage {
-      @include Path(
-              $color: $ActiveBlue,
-              $opacity: 1,
-              $linkArrow: "./img/icons/Link-arrow-blue.svg");
-      &:hover {
-        @include Path(
-                $color: $AccentRed,
-                $opacity: 1,
-                $linkArrow: "./img/icons/Link-arrow-red.svg");
-      }
-    }
+    @include Path;
   }
 
   &__heading {
@@ -84,6 +61,7 @@
       display: none;
     }
   }
+
 }
 
 @media (max-width: 1009px) {

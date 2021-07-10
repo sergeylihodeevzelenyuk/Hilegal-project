@@ -4,15 +4,8 @@
   padding: 0 40px 0;
 
   &__path {
-    @include Path($white, 50%, "./img/icons/Link-arrow-white.svg");
+    @include Path($white, $AccentRed, 0.5);
     margin: 0 0 0 20px;
-
-    &:hover {
-      @include Path(
-              $color: $AccentRed,
-              $opacity: 1,
-              $linkArrow: "./img/icons/Link-arrow-red.svg");
-    }
   }
 
   &__path-hidden {

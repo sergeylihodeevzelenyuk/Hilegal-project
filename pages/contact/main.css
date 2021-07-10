@@ -789,6 +789,7 @@ select {
     font-weight: 600;
   }
   .feedback__message {
+    height: calc(100vh - 397px);
     height: calc(calc(var(--vh, 1vh) * 100) - 397px);
   }
 }
