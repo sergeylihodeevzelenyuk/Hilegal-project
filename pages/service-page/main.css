@@ -1581,12 +1581,9 @@ select {
 
 .body__overflow-hidden {
   overflow: hidden;
-  position: relative;
-  height: 100%;
-}
-
-.body__overflow-hidden_feedback {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  position: relative;
 }
 
 .page__wrapper {

@@ -764,8 +764,9 @@ select {
 
 .body__overflow-hidden {
   overflow: hidden;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   position: relative;
-  height: 100%;
 }
 
 .page__wrapper {

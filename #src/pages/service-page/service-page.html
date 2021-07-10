@@ -46,7 +46,7 @@
         <script>
             function request() {
                 document.getElementById("feedback").classList.toggle("publication__request_active");
-                document.getElementById("body").classList.toggle("body__overflow-hidden_feedback");
+                document.getElementById("body").classList.toggle("body__overflow-hidden");
             }
         </script>
         <div class="publication__details">
@@ -76,5 +76,9 @@
     "border-visibility": "border-top-separate"
     })
 </div>
+<script>
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+</script>
 </body>
 </html>

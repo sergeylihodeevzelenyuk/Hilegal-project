@@ -595,7 +595,10 @@ select {
 }
 
 .body__overflow-hidden {
-  height: 100%;
+  overflow: hidden;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  position: relative;
 }
 
 .page__wrapper {

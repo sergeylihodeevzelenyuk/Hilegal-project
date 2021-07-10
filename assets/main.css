@@ -1866,7 +1866,8 @@ select {
 
 .body__overflow-hidden {
   overflow: hidden;
-  height: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   position: relative;
 }
 
@@ -1879,6 +1880,7 @@ select {
 .hallo__section {
   position: relative;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   background: url("./img/PatternSplash.png") center/cover no-repeat;
 }
@@ -1952,7 +1954,7 @@ select {
     bottom: 550px;
   }
   .hallo__button-scroll-down {
-    bottom: 105px;
+    bottom: 20px;
   }
 }
 
