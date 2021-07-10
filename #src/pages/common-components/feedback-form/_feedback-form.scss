@@ -53,5 +53,9 @@
     &__heading {
       @include font-style(22px, 26px, $AccentRed, 600);
     }
+
+    &__message {
+      height: calc(calc(var(--vh, 1vh) * 100) - 397px);
+    }
   }
 }
