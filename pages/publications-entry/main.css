@@ -750,6 +750,27 @@ select {
   opacity: 1;
 }
 
+.publications__path:hover {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F0145A;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 1;
+  border-bottom: 3px solid transparent;
+}
+
+.publications__path:hover::after {
+  display: inline-block;
+  content: "";
+  background: url("../../assets/img/icons/Link-arrow-red.svg") center 1px/contain no-repeat;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
 .publications__path_homepage {
   display: inline-block;
   font-family: 'Open Sans', sans-serif;
@@ -771,8 +792,25 @@ select {
   opacity: 1;
 }
 
-.publications__path:hover {
-  border-bottom: 3px solid #F0145A;
+.publications__path_homepage:hover {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F0145A;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 1;
+  border-bottom: 3px solid transparent;
+}
+
+.publications__path_homepage:hover::after {
+  display: inline-block;
+  content: "";
+  background: url("./img/icons/Link-arrow-red.svg") center 1px/contain no-repeat;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
 }
 
 .publications__heading {
@@ -1065,7 +1103,7 @@ select {
 .body__overflow-hidden {
   overflow: hidden;
   position: relative;
-  height: 100vh;
+  height: 100%;
 }
 
 .page__wrapper {

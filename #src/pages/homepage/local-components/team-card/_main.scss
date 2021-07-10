@@ -44,9 +44,15 @@
   }
 
   &__path {
-    @include Path;
+    @include Path(
+            $color: $ActiveBlue,
+            $opacity: 1,
+            $linkArrow: "./img/icons/Link-arrow-blue.svg");
     &:hover {
-      border-bottom: 3px solid $AccentRed;
+      @include Path(
+              $color: $AccentRed,
+              $opacity: 1,
+              $linkArrow: "./img/icons/Link-arrow-red.svg");
     }
   }
 

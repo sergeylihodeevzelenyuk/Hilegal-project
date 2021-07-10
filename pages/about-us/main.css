@@ -595,7 +595,7 @@ select {
 }
 
 .body__overflow-hidden {
-  height: 100vh;
+  height: 100%;
 }
 
 .page__wrapper {
